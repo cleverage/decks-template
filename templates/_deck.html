@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Web Mobile</title>
+
+	<!-- Favicons generated with http://realfavicongenerator.net/ -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!-- /Favicons -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="/bower_components/reveal.js/css/reveal.css">
+
+	<link rel="stylesheet" href="/css/theme.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="/bower_components/reveal.js/lib/css/github.css" id="highlight-theme">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		if (window.location.search.match(/print-pdf/gi)) {
+			var link = document.createElement('link');
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = '../bower_components/reveal.js/css/print/pdf.css';
+			document.getElementsByTagName('head')[0].appendChild(link);
+		}
+	</script>
+</head>
+
+<body>
+<img class="logo" src="/images/logo.svg"
+	 title="Logo">
+
+<div class="reveal">
+
+	<div class="slides">
+
+		<% _.forEach(slides, function(slide) { %>
+		<% if (!_.isArray(slide)) { %>
+		<%= section(slide) %>
+		<% } %>
+		<% if (_.isArray(slide)) { %>
+		<section>
+			<% _.forEach(slide, function(verticalslide) { %>
+			<%= section(verticalslide) %>
+			<% }); %>
+		</section>
+		<% } %>
+		<% }); %>
+	</div>
+
+</div>
+
+<script src="/bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="/bower_components/reveal.js/js/reveal.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+
+<script>
+	// Configure Reveal
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: false,
+		slideNumber: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+		transitionSpeed: "default",
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{
+				src: '/bower_components/reveal.js/lib/js/classList.js',
+				condition: function () {
+					return !document.body.classList;
+				}
+			},
+			{
+				src: '/bower_components/reveal.js/plugin/markdown/marked.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: '/bower_components/reveal.js/plugin/markdown/markdown.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: '/bower_components/reveal.js/plugin/highlight/highlight.js',
+				async: true,
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			},
+			{
+				src: '/bower_components/reveal.js/plugin/zoom-js/zoom.js',
+				async: true,
+				condition: function () {
+					return !!document.body.classList;
+				}
+			},
+			{
+				src: '/bower_components/reveal.js/plugin/notes/notes.js',
+				async: true,
+				condition: function () {
+					return !!document.body.classList;
+				}
+			},
+			// { src: '../bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+			//{ src: '../bower_components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+
+			{
+				src: '/js/loadhtmlslides.js',
+				condition: function () {
+					return !!document.querySelector('[data-html]');
+				}
+			}
+		]
+	});
+</script>
+
+</body>
+
+</html>
