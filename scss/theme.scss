@@ -3,259 +3,265 @@
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-// This file has been copied over from
-// ../../bower_components/reveal.js/css/theme/source/default.scss
-// Default mixins and settings -----------------
-@import "../bower_components/reveal.js/css/theme/template/mixins";
-@import "./mixins";
-@import "../bower_components/reveal.js/css/theme/template/settings";
-// ---------------------------------------------
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display:700italic);
+ // This file has been copied over from
+ // ../../bower_components/reveal.js/css/theme/source/default.scss
+ // Default mixins and settings -----------------
+ @import "../bower_components/reveal.js/css/theme/template/mixins";
+ @import "./mixins";
+ @import "../bower_components/reveal.js/css/theme/template/settings";
+ // ---------------------------------------------
+ @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+ @import url(http://fonts.googleapis.com/css?family=Playfair+Display:700italic);
 
-// ---------------------------------------------
-$editorMainColor: #fb2e59;
+ // ---------------------------------------------
+ $editorMainColor: #fb2e59;
 
-// Override theme settings ---------------------
-$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 20px 20px rgba(0, 0, 0, .15);
-$headingMargin: 40px 0 40px 0 !important;
-// Other options include e.g.
-// $mainFont: 'Open Sans', sans-serif;
-// $linkColor: #acd3f0;
-// $linkColorHover: $linkColor;
-// $headingFont: 'Montserrat', Impact, sans-serif;
-// $headingTextShadow: none;
-// $headingLetterSpacing: -0.03em;
-// $headingTextTransform: none;
-// $selectionBackgroundColor: #e0ad52;
-// $mainFontSize: 30px;
-// See ../bower_components/reveal.js/css/theme/template/settings.scss for the full list.
-// ---------------------------------------------
+ // Override theme settings ---------------------
+ $heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 20px 20px rgba(0, 0, 0, .15);
+ $headingMargin: 40px 0 40px 0 !important;
+ // Other options include e.g.
+ // $mainFont: 'Open Sans', sans-serif;
+ // $linkColor: #acd3f0;
+ // $linkColorHover: $linkColor;
+ // $headingFont: 'Montserrat', Impact, sans-serif;
+ // $headingTextShadow: none;
+ // $headingLetterSpacing: -0.03em;
+ // $headingTextTransform: none;
+ // $selectionBackgroundColor: #e0ad52;
+ // $mainFontSize: 30px;
+ // See ../bower_components/reveal.js/css/theme/template/settings.scss for the full list.
+ // ---------------------------------------------
 
-// Background generator ------------------------
-@mixin bodyBackground() {
-  @include radial-gradient(rgba(28, 30, 32, 1), rgba(85, 90, 95, 1));
-}
+ // Background generator ------------------------
+ @mixin bodyBackground() {
+ 	@include radial-gradient(rgba(28, 30, 32, 1), rgba(85, 90, 95, 1));
+ }
 
-// ---------------------------------------------
+ // ---------------------------------------------
 
-// Theme template ------------------------------
-@import "../bower_components/reveal.js/css/theme/template/theme";
-@import "../bower_components/reveal.js/css/theme/source/simple";
-// ---------------------------------------------
+ // Theme template ------------------------------
+ @import "../bower_components/reveal.js/css/theme/template/theme";
+ @import "../bower_components/reveal.js/css/theme/source/simple";
+ // ---------------------------------------------
 
-// Include theme-specific fonts ----------------
-@font-face {
-  font-family: 'League Gothic';
-  src: url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.eot');
-  src: url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'), url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.woff') format('woff'), url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.ttf') format('truetype'), url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+ // Include theme-specific fonts ----------------
+ @font-face {
+ 	font-family: 'League Gothic';
+ 	src: url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.eot');
+ 	src: url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'), url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.woff') format('woff'), url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.ttf') format('truetype'), url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
 
-  font-weight: normal;
-  font-style: normal;
-}
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
 
-.reveal section img {
-  border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
+ .reveal section img {
+ 	border: none;
+ 	-webkit-box-shadow: none;
+ 	-moz-box-shadow: none;
+ 	box-shadow: none;
+ }
 
-img.logo {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 25vh;
-}
+ img.logo {
+ 	position: fixed;
+ 	top: 20px;
+ 	right: 20px;
+ 	width: 25vh;
+ }
 
-.reveal {
+ .reveal {
 
-  // Tables formating
-  table {
-    border-collapse: collapse;
-    border: 1px;
-    thead {
-      background-color: hexToRgba($editorMainColor, 0.1);
-    }
-    th, td {
-      border:1px solid hexToRgba($editorMainColor, 0.3);
-      padding: 5px;
-    }
-  }
+ 	font-size: 4vh;
 
-  // Code formating
-  p, li {
-    code {
-      background-color: hexToRgba($editorMainColor, 0.1);
-    }
-  }
+ 	// Tables formating
+ 	table {
+ 		border-collapse: collapse;
+ 		border: 1px;
+ 		thead {
+ 			background-color: hexToRgba($editorMainColor, 0.1);
+ 		}
+ 		th, td {
+ 			border:1px solid hexToRgba($editorMainColor, 0.3);
+ 			padding: 5px;
+ 		}
+ 	}
 
-  // Quote formating
-  blockquote {
-    padding-left: 2vw;
-    border-color: $editorMainColor;
-    border-left: 10px solid $editorMainColor;
-    box-shadow: 0 0 2px hexToRgba($editorMainColor, 0.5);
+ 	// Code formating
+ 	p, li {
+ 		code {
+ 			background-color: hexToRgba($editorMainColor, 0.1);
+ 		}
+ 	}
 
-	cite {
-	  font-style: italic;
-	  font-size: 70%;
-	  display: block;
-	  margin-top: 1em;
+ 	// Quote formating
+ 	blockquote {
+ 		padding-left: 2vw;
+ 		border-color: $editorMainColor;
+ 		border-left: 10px solid $editorMainColor;
+ 		box-shadow: 0 0 2px hexToRgba($editorMainColor, 0.5);
 
-	  &:before {
-		content:"\2013 "
-	  }
-	}
-  }
+ 		cite {
+ 			font-style: italic;
+ 			font-size: 70%;
+ 			display: block;
+ 			margin-top: 1em;
 
-  // Specific headers
-  h3.stack-title {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-  }
-  h2.stack-title {
-    text-transform: uppercase;
-  }
+ 			&:before {
+ 				content:"\2013 "
+ 			}
+ 		}
+ 	}
 
-  // Listing
-  .slides {
-    text-align: left;
-    section {
-      > ul {
-        padding-left: 2vw;
-        li {
-          ul {
-            li {
-              font-size: 80%;
-              color: #222;
-            }
-          }
-        }
-        margin-bottom: 20px;
-      }
-    }
-  }
-}
+ 	// Specific headers
+ 	h3.stack-title {
+ 		font-family: 'Playfair Display', serif;
+ 		font-style: italic;
+ 	}
+ 	h2.stack-title {
+ 		text-transform: uppercase;
+ 	}
 
-// Charting
-#gartnerChart {
+ 	// Listing
+ 	.slides {
+ 		text-align: left;
+ 		section {
+ 			> ul {
+ 				padding-left: 2vw;
+ 				li {
+ 					ul {
+ 						li {
+ 							font-size: 80%;
+ 							color: #222;
+ 						}
+ 					}
+ 				}
+ 				margin-bottom: 20px;
+ 			}
+ 		}
+ 	}
+ }
 
-  .ct-point {
-    stroke-width: 10px;
-    stroke-linecap: round
-  }
+ // Charting
+ #gartnerChart {
 
-  .ct-line {
-    fill: none;
-    stroke-width: 4px
-  }
+ 	.ct-point {
+ 		stroke-width: 10px;
+ 		stroke-linecap: round
+ 	}
 
-  .ct-area {
-    stroke: none;
-    fill-opacity: .1
-  }
+ 	.ct-line {
+ 		fill: none;
+ 		stroke-width: 4px
+ 	}
 
-  .ct-bar {
-    fill: none;
-    stroke-width: 10px
-  }
+ 	.ct-area {
+ 		stroke: none;
+ 		fill-opacity: .1
+ 	}
 
-  .ct-slice.ct-donut {
-    fill: none;
-    stroke-width: 60px
-  }
+ 	.ct-bar {
+ 		fill: none;
+ 		stroke-width: 10px
+ 	}
 
-  .ct-series.ct-series-a {
-    .ct-bar, .ct-line, .ct-point, .ct-slice.ct-donut {
-      stroke: #d70206
-    }
+ 	.ct-slice.ct-donut {
+ 		fill: none;
+ 		stroke-width: 60px
+ 	}
 
-    .ct-area, .ct-slice:not(.ct-donut) {
-      fill: #d70206
-    }
+ 	.ct-series.ct-series-a {
+ 		.ct-bar, .ct-line, .ct-point, .ct-slice.ct-donut {
+ 			stroke: #d70206
+ 		}
 
-    .ct-point {
-      stroke-width: 10px;
-      stroke-linecap: round;
-    }
+ 		.ct-area, .ct-slice:not(.ct-donut) {
+ 			fill: #d70206
+ 		}
 
-    .ct-line {
-      fill: none;
-      stroke-width: 4px;
-      stroke-dasharray: 5px;
-      -webkit-animation: dashoffset 1s linear infinite;
-      -moz-animation: dashoffset 1s linear infinite;
-      -o-animation: dashoffset 1s linear infinite;
-      $animation: dashoffset 1s linear infinite
-    }
-  }
-}
+ 		.ct-point {
+ 			stroke-width: 10px;
+ 			stroke-linecap: round;
+ 		}
 
-// Charting animations
+ 		.ct-line {
+ 			fill: none;
+ 			stroke-width: 4px;
+ 			stroke-dasharray: 5px;
+ 			-webkit-animation: dashoffset 1s linear infinite;
+ 			-moz-animation: dashoffset 1s linear infinite;
+ 			-o-animation: dashoffset 1s linear infinite;
+ 			$animation: dashoffset 1s linear infinite
+ 		}
+ 	}
+ }
 
-@-webkit-keyframes dashoffset {
-  0% {
-    stroke-dashoffset: 0
-  }
+ // Charting animations
 
-  100% {
-    stroke-dashoffset: -20px
-  }
-}
+ @-webkit-keyframes dashoffset {
+ 	0% {
+ 		stroke-dashoffset: 0
+ 	}
 
-@-moz-keyframes dashoffset {
-  0% {
-    stroke-dashoffset: 0
-  }
+ 	100% {
+ 		stroke-dashoffset: -20px
+ 	}
+ }
 
-  100% {
-    stroke-dashoffset: -20px
-  }
-}
+ @-moz-keyframes dashoffset {
+ 	0% {
+ 		stroke-dashoffset: 0
+ 	}
 
-@-ms-keyframes dashoffset {
-  0% {
-    stroke-dashoffset: 0
-  }
+ 	100% {
+ 		stroke-dashoffset: -20px
+ 	}
+ }
 
-  100% {
-    stroke-dashoffset: -20px
-  }
-}
+ @-ms-keyframes dashoffset {
+ 	0% {
+ 		stroke-dashoffset: 0
+ 	}
 
-@keyframes dashoffset {
-  0% {
-    stroke-dashoffset: 0
-  }
+ 	100% {
+ 		stroke-dashoffset: -20px
+ 	}
+ }
 
-  100% {
-    stroke-dashoffset: -20px
-  }
-}
+ @keyframes dashoffset {
+ 	0% {
+ 		stroke-dashoffset: 0
+ 	}
 
-// See ../../bower_components/reveal.js/css/theme/README.md
-// for further explanations on how reveal.js themes work.
+ 	100% {
+ 		stroke-dashoffset: -20px
+ 	}
+ }
 
-.two-floating-elements {
-  > p,
-  > ul {
-    max-width: 50%;
-    float:left;
-    font-size: 0.7em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  p:last-child,
-  ul:last-child {
-    padding-left: 0.25em;
-  }
-  p:first-child,
-  ul:first-child {
-    padding-right: 0.25em;
-  }
-  > ul {
-    margin-left: 0;
-  }
-}
+ // See ../../bower_components/reveal.js/css/theme/README.md
+ // for further explanations on how reveal.js themes work.
+
+ .two-floating-elements {
+ 	> p,
+ 	> ul,
+ 	> ol {
+ 		max-width: 50%;
+ 		float:left;
+ 		font-size: 0.7em;
+ 		-webkit-box-sizing: border-box;
+ 		-moz-box-sizing: border-box;
+ 		box-sizing: border-box;
+
+ 		&:last-child {
+ 			padding-left: 0.25em;
+ 		}
+ 		&:first-child {
+ 			padding-right: 0.25em;
+ 		}
+
+ 	}
+
+
+ 	> ul,
+ 	> ol {
+ 		margin-left: 0;
+ 	}
+ }
