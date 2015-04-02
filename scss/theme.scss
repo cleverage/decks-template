@@ -72,30 +72,30 @@ img.logo {
 
   // Tables formating
   table {
-    border-collapse: collapse;
-    border: 1px;
-    thead {
-      background-color: hexToRgba($editorMainColor, 0.1);
-    }
-    th, td {
-      border:1px solid hexToRgba($editorMainColor, 0.3);
-      padding: 5px;
-    }
+	border-collapse: collapse;
+	border: 1px;
+	thead {
+	  background-color: hexToRgba($editorMainColor, 0.1);
+	}
+	th, td {
+	  border:1px solid hexToRgba($editorMainColor, 0.3);
+	  padding: 5px;
+	}
   }
 
   // Code formating
   p, li {
-    code {
-      background-color: hexToRgba($editorMainColor, 0.1);
-    }
+	code {
+	  background-color: hexToRgba($editorMainColor, 0.1);
+	}
   }
 
   // Quote formating
   blockquote {
-    padding-left: 2vw;
-    border-color: $editorMainColor;
-    border-left: 10px solid $editorMainColor;
-    box-shadow: 0 0 2px hexToRgba($editorMainColor, 0.5);
+	padding-left: 2vw;
+	border-color: $editorMainColor;
+	border-left: 10px solid $editorMainColor;
+	box-shadow: 0 0 2px hexToRgba($editorMainColor, 0.5);
 
 	cite {
 	  font-style: italic;
@@ -111,30 +111,30 @@ img.logo {
 
   // Specific headers
   h3.stack-title {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
   }
   h2.stack-title {
-    text-transform: uppercase;
+	text-transform: uppercase;
   }
 
   // Listing
   .slides {
-    text-align: left;
-    section {
-      > ul {
-        padding-left: 2vw;
-        li {
-          ul {
-            li {
-              font-size: 80%;
-              color: #222;
-            }
-          }
-        }
-        margin-bottom: 20px;
-      }
-    }
+	text-align: left;
+	section {
+	  > ul {
+		padding-left: 2vw;
+		li {
+		  ul {
+			li {
+			  font-size: 80%;
+			  color: #222;
+			}
+		  }
+		}
+		margin-bottom: 20px;
+	  }
+	}
   }
 }
 
@@ -142,53 +142,53 @@ img.logo {
 #gartnerChart {
 
   .ct-point {
-    stroke-width: 10px;
-    stroke-linecap: round
+	stroke-width: 10px;
+	stroke-linecap: round
   }
 
   .ct-line {
-    fill: none;
-    stroke-width: 4px
+	fill: none;
+	stroke-width: 4px
   }
 
   .ct-area {
-    stroke: none;
-    fill-opacity: .1
+	stroke: none;
+	fill-opacity: .1
   }
 
   .ct-bar {
-    fill: none;
-    stroke-width: 10px
+	fill: none;
+	stroke-width: 10px
   }
 
   .ct-slice.ct-donut {
-    fill: none;
-    stroke-width: 60px
+	fill: none;
+	stroke-width: 60px
   }
 
   .ct-series.ct-series-a {
-    .ct-bar, .ct-line, .ct-point, .ct-slice.ct-donut {
-      stroke: #d70206
-    }
+	.ct-bar, .ct-line, .ct-point, .ct-slice.ct-donut {
+	  stroke: #d70206
+	}
 
-    .ct-area, .ct-slice:not(.ct-donut) {
-      fill: #d70206
-    }
+	.ct-area, .ct-slice:not(.ct-donut) {
+	  fill: #d70206
+	}
 
-    .ct-point {
-      stroke-width: 10px;
-      stroke-linecap: round;
-    }
+	.ct-point {
+	  stroke-width: 10px;
+	  stroke-linecap: round;
+	}
 
-    .ct-line {
-      fill: none;
-      stroke-width: 4px;
-      stroke-dasharray: 5px;
-      -webkit-animation: dashoffset 1s linear infinite;
-      -moz-animation: dashoffset 1s linear infinite;
-      -o-animation: dashoffset 1s linear infinite;
-      $animation: dashoffset 1s linear infinite
-    }
+	.ct-line {
+	  fill: none;
+	  stroke-width: 4px;
+	  stroke-dasharray: 5px;
+	  -webkit-animation: dashoffset 1s linear infinite;
+	  -moz-animation: dashoffset 1s linear infinite;
+	  -o-animation: dashoffset 1s linear infinite;
+	  $animation: dashoffset 1s linear infinite
+	}
   }
 }
 
@@ -196,66 +196,91 @@ img.logo {
 
 @-webkit-keyframes dashoffset {
   0% {
-    stroke-dashoffset: 0
+	stroke-dashoffset: 0
   }
 
   100% {
-    stroke-dashoffset: -20px
+	stroke-dashoffset: -20px
   }
 }
 
 @-moz-keyframes dashoffset {
   0% {
-    stroke-dashoffset: 0
+	stroke-dashoffset: 0
   }
 
   100% {
-    stroke-dashoffset: -20px
+	stroke-dashoffset: -20px
   }
 }
 
 @-ms-keyframes dashoffset {
   0% {
-    stroke-dashoffset: 0
+	stroke-dashoffset: 0
   }
 
   100% {
-    stroke-dashoffset: -20px
+	stroke-dashoffset: -20px
   }
 }
 
 @keyframes dashoffset {
   0% {
-    stroke-dashoffset: 0
+	stroke-dashoffset: 0
   }
 
   100% {
-    stroke-dashoffset: -20px
+	stroke-dashoffset: -20px
   }
 }
 
 // See ../../bower_components/reveal.js/css/theme/README.md
 // for further explanations on how reveal.js themes work.
 
-.two-floating-elements {
+.two-floating-elements,
+.two-columns {
   > p,
-  > ul {
-    max-width: 50%;
-    float:left;
-    font-size: 0.7em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  > ul,
+  > ol {
+	max-width: 50%;
+	float:left;
+	font-size: 0.9em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 50%;
+
+	&:last-child {
+	  padding-left: 0.25em;
+	}
+	&:first-child {
+	  padding-right: 0.25em;
+	}
+
+	margin-left: 0;
   }
-  p:last-child,
-  ul:last-child {
-    padding-left: 0.25em;
+
+  > p {
+	text-align: center;
   }
-  p:first-child,
-  ul:first-child {
-    padding-right: 0.25em;
-  }
-  > ul {
-    margin-left: 0;
+}
+
+.two-columns-lists {
+  > ul,
+  > ol {
+	&:only-of-type {
+	  display: table;
+	  width: 100%;
+	  > li {
+		display: table-cell;
+		margin-left: 10px;
+
+		li {
+		  display: list-item;
+		}
+	  }
+	}
+
+	margin-left: 0;
   }
 }
