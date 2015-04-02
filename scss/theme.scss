@@ -70,8 +70,6 @@
 
  .reveal {
 
- 	font-size: 4vh;
-
  	// Tables formating
  	table {
  		border-collapse: collapse;
@@ -124,10 +122,12 @@
  	.slides {
  		text-align: left;
  		section {
- 			> ul {
+ 			> ul,
+ 			> ol {
  				padding-left: 2vw;
  				li {
- 					ul {
+ 					ul,
+ 					ol {
  						li {
  							font-size: 80%;
  							color: #222;
@@ -140,16 +140,18 @@
  	}
  }
 
- .two-floating-elements {
+ .two-floating-elements,
+ .two-columns {
  	> p,
  	> ul,
  	> ol {
  		max-width: 50%;
  		float:left;
- 		font-size: 0.7em;
+ 		font-size: 0.9em;
  		-webkit-box-sizing: border-box;
  		-moz-box-sizing: border-box;
  		box-sizing: border-box;
+ 		width: 50%;
 
  		&:last-child {
  			padding-left: 0.25em;
@@ -158,11 +160,30 @@
  			padding-right: 0.25em;
  		}
 
+ 		margin-left: 0;
  	}
 
+ 	> p {
+ 		text-align: center;
+ 	}
+ }
 
+ .two-columns-lists {
  	> ul,
  	> ol {
+ 		&:only-of-type {
+ 			display: table;
+ 			width: 100%;
+ 			> li {
+ 				display: table-cell;
+ 				margin-left: 10px;
+
+ 				li {
+ 					display: list-item;
+ 				}
+ 			}
+ 		}
+
  		margin-left: 0;
  	}
  }
