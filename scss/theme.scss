@@ -10,26 +10,30 @@
 @import "./mixins";
 @import "../bower_components/reveal.js/css/theme/template/settings";
 // ---------------------------------------------
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display:700italic);
 
-// ---------------------------------------------
-$editorMainColor: #fb2e59;
+$cleverGold: #c8a151;
+$clevergarden: #667d18;
+$cleverforge: #007eb1;
+$cleverpresence: #c74917;
+$editorMainColor: $cleverGold;
 
 // Override theme settings ---------------------
-$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 20px 20px rgba(0, 0, 0, .15);
 $headingMargin: 40px 0 40px 0 !important;
-// Other options include e.g.
-// $mainFont: 'Open Sans', sans-serif;
-// $linkColor: #acd3f0;
-// $linkColorHover: $linkColor;
-// $headingFont: 'Montserrat', Impact, sans-serif;
-// $headingTextShadow: none;
-// $headingLetterSpacing: -0.03em;
-// $headingTextTransform: none;
-// $selectionBackgroundColor: #e0ad52;
-// $mainFontSize: 30px;
-// See ../bower_components/reveal.js/css/theme/template/settings.scss for the full list.
+$mainFont: Georgia, "Times New Roman", Times, serif;
+$mainColor: #000;
+$headingFont: Arial, Helvetica, sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: $cleverGold;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+$progressBarColor: $cleverforge;
+// ---------------------------------------------
+
+// Theme template ------------------------------
+@import "../bower_components/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
 
 // Background generator ------------------------
@@ -38,21 +42,6 @@ $headingMargin: 40px 0 40px 0 !important;
 }
 
 // ---------------------------------------------
-
-// Theme template ------------------------------
-@import "../bower_components/reveal.js/css/theme/template/theme";
-@import "../bower_components/reveal.js/css/theme/source/simple";
-// ---------------------------------------------
-
-// Include theme-specific fonts ----------------
-@font-face {
-  font-family: 'League Gothic';
-  src: url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.eot');
-  src: url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'), url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.woff') format('woff'), url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.ttf') format('truetype'), url('../../bower_components/reveal.js/lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
-
-  font-weight: normal;
-  font-style: normal;
-}
 
 .reveal section img {
   border: none;
@@ -63,19 +52,27 @@ $headingMargin: 40px 0 40px 0 !important;
 
 img.logo {
   position: fixed;
-  top: 20px;
+  top: 10px;
   right: 20px;
-  width: 25vh;
+  width: 20vh;
 }
 
 .reveal {
+
+  .progress span {
+	background: $progressBarColor;
+  }
+
+  strong {
+	color: $cleverGold;
+  }
 
   // Tables formating
   table {
 	border-collapse: collapse;
 	border: 1px;
 	thead {
-	  background-color: hexToRgba($editorMainColor, 0.1);
+	  background-color: hexToRgba($editorMainColor, 0.2);
 	}
 	th, td {
 	  border:1px solid hexToRgba($editorMainColor, 0.3);
@@ -86,7 +83,7 @@ img.logo {
   // Code formating
   p, li {
 	code {
-	  background-color: hexToRgba($editorMainColor, 0.1);
+	  background-color: hexToRgba($editorMainColor, 0.3);
 	}
   }
 
@@ -96,6 +93,7 @@ img.logo {
 	border-color: $editorMainColor;
 	border-left: 10px solid $editorMainColor;
 	box-shadow: 0 0 2px hexToRgba($editorMainColor, 0.5);
+	width:90%;
 
 	cite {
 	  font-style: italic;
@@ -109,10 +107,18 @@ img.logo {
 	}
   }
 
+  h1, h2, h3, h4, h5, h6 {
+	font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h2 {
+	font-size: 1.8em;
+  }
+
   // Specific headers
   h3.stack-title {
-	font-family: 'Playfair Display', serif;
-	font-style: italic;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgb(200, 161, 81);
   }
   h2.stack-title {
 	text-transform: uppercase;
