@@ -115,6 +115,14 @@ module.exports = (grunt) ->
                     ]
                     dest: 'dist/'
                 }]
+            slides:
+                files: [{
+                    expand: true
+                    src: [
+                        'slides/**'
+                    ]
+                    dest: 'dist/'
+                }]
 
         clean:
             dist: ['dist/**']
