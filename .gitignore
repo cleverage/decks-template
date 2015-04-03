@@ -25,4 +25,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # Ignore slides
-slides
+slides*
