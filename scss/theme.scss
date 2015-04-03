@@ -80,13 +80,6 @@ img.logo {
 	}
   }
 
-  // Code formating
-  p, li {
-	code {
-	  background-color: hexToRgba($editorMainColor, 0.3);
-	}
-  }
-
   // Quote formating
   blockquote {
 	padding-left: 2vw;
