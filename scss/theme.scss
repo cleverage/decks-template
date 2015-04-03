@@ -6,9 +6,9 @@
 // This file has been copied over from
 // ../../bower_components/reveal.js/css/theme/source/default.scss
 // Default mixins and settings -----------------
-@import "../bower_components/reveal.js/css/theme/template/mixins";
+@import "./default/mixins";
 @import "./mixins";
-@import "../bower_components/reveal.js/css/theme/template/settings";
+@import "./default/settings";
 // ---------------------------------------------
 
 $cleverGold: #c8a151;
@@ -33,7 +33,7 @@ $progressBarColor: $cleverforge;
 // ---------------------------------------------
 
 // Theme template ------------------------------
-@import "../bower_components/reveal.js/css/theme/template/theme";
+@import "./default/theme";
 // ---------------------------------------------
 
 // Background generator ------------------------
@@ -44,7 +44,7 @@ $progressBarColor: $cleverforge;
 // ---------------------------------------------
 
 .reveal section img {
-  border: none;
+  border: none; 
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -77,6 +77,13 @@ img.logo {
 	th, td {
 	  border:1px solid hexToRgba($editorMainColor, 0.3);
 	  padding: 5px;
+	}
+  }
+
+  // Code formating
+  p, li {
+	code {
+	  background-color: hexToRgba($editorMainColor, 0.3);
 	}
   }
 
