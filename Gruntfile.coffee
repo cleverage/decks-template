@@ -27,18 +27,18 @@ module.exports = (grunt) ->
 
             common_img:
                 files: [
-                    'images/*/{,*/}*.{png,jpg,gif,svg}'
+                    'images/**/*.{png,jpg,gif,svg}'
                 ]
                 tasks: [
-                    'imagemin:common'
+                    'newer:imagemin:common'
                 ]
 
             specific_img:
                 files: [
-                    'slides/*/{,*/}*.{png,jpg,gif,svg}'
+                    'slides/**/*.{png,jpg,gif,svg}'
                 ]
                 tasks: [
-                    'imagemin:specific'
+                    'newer:imagemin:specific'
                 ]
 
             index:
