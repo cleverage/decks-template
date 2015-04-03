@@ -224,10 +224,10 @@ module.exports = (grunt) ->
             'buildDecks'
             'buildIndex'
             'sass'
-            'copy:vendors'
+            'newer:copy:vendors'
             'sync:slides'
             'sync:scripts'
-            'imagemin'
+            'newer:imagemin'
         ]
 
     # Define default task.
