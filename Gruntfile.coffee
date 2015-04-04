@@ -12,6 +12,7 @@ module.exports = (grunt) ->
                     'dist/js/*.js'
                     'dist/css/*.css'
                     'dist/images/*/{,*/}*.{png,jpg,gif,svg}'
+                    'dist/slides/**/_images/*.{png,jpg,gif,svg}'
                 ]
 
             decks:
@@ -35,7 +36,7 @@ module.exports = (grunt) ->
 
             specific_img:
                 files: [
-                    'slides/**/*.{png,jpg,gif,svg}'
+                    'slides/**/_images/*.{png,jpg,gif,svg}'
                 ]
                 tasks: [
                     'newer:imagemin:specific'
