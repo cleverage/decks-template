@@ -7,19 +7,19 @@
 	<title>Web Mobile</title>
 
 	<!-- Favicons generated with http://realfavicongenerator.net/ -->
-	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/manifest.json">
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="manifest.json">
 	<meta name="msapplication-TileColor" content="#252429">
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">
@@ -27,9 +27,9 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<link rel="stylesheet" href="/bower_components/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
 
-	<link rel="stylesheet" href="/css/theme.css" id="theme">
+	<link rel="stylesheet" href="css/theme.css" id="theme">
 
 	<!-- For syntax highlighting -->
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css" id="highlight-theme">
@@ -47,7 +47,7 @@
 </head>
 
 <body>
-<img class="logo" src="/images/logo.svg"
+<img class="logo" src="images/logo.svg"
 	 title="Logo">
 
 <div class="reveal">
@@ -70,8 +70,8 @@
 
 </div>
 
-<script src="/bower_components/reveal.js/lib/js/head.min.js"></script>
-<script src="/bower_components/reveal.js/js/reveal.js"></script>
+<script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="bower_components/reveal.js/js/reveal.js"></script>
 
 
 <script>
@@ -92,49 +92,49 @@
 		// Optional libraries used to extend on reveal.js
 		dependencies: [
 			{
-				src: '/bower_components/reveal.js/lib/js/classList.js',
+				src: 'bower_components/reveal.js/lib/js/classList.js',
 				condition: function () {
 					return !document.body.classList;
 				}
 			},
 			{
-				src: '/bower_components/reveal.js/plugin/markdown/marked.js',
+				src: 'bower_components/reveal.js/plugin/markdown/marked.js',
 				condition: function () {
 					return !!document.querySelector('[data-markdown]');
 				}
 			},
 			{
-				src: '/bower_components/reveal.js/plugin/markdown/markdown.js',
+				src: 'bower_components/reveal.js/plugin/markdown/markdown.js',
 				condition: function () {
 					return !!document.querySelector('[data-markdown]');
 				}
 			},
 			{
-				src: '/bower_components/reveal.js/plugin/highlight/highlight.js',
+				src: 'bower_components/reveal.js/plugin/highlight/highlight.js',
 				async: true,
 				callback: function () {
 					hljs.initHighlightingOnLoad();
 				}
 			},
 			{
-				src: '/bower_components/reveal.js/plugin/zoom-js/zoom.js',
+				src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js',
 				async: true,
 				condition: function () {
 					return !!document.body.classList;
 				}
 			},
 			{
-				src: '/bower_components/reveal.js/plugin/notes/notes.js',
+				src: 'bower_components/reveal.js/plugin/notes/notes.js',
 				async: true,
 				condition: function () {
 					return !!document.body.classList;
 				}
 			},
-			// { src: '../bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-			//{ src: '../bower_components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'bower_components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 
 			{
-				src: '/js/loadhtmlslides.js',
+				src: 'js/loadhtmlslides.js',
 				condition: function () {
 					return !!document.querySelector('[data-html]');
 				}
