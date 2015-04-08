@@ -44,7 +44,7 @@ $progressBarColor: $cleverforge;
 // ---------------------------------------------
 
 .reveal section img {
-  border: none; 
+  border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -55,6 +55,22 @@ img.logo {
   top: 10px;
   right: 20px;
   width: 20vh;
+}
+
+img.print-logo {
+  display: none;
+}
+
+.print-pdf {
+  img.logo {
+	display: none;
+  }
+
+  img.print-logo {
+	display: block;
+	float:right;
+	width: 20%;
+  }
 }
 
 .reveal {
