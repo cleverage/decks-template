@@ -9,6 +9,7 @@
 @import "./default/mixins";
 @import "./mixins";
 @import "./default/settings";
+
 // ---------------------------------------------
 
 $cleverGold: #c8a151;
@@ -27,7 +28,7 @@ $headingTextShadow: none;
 $headingTextTransform: none;
 $backgroundColor: #fff;
 $linkColor: $cleverGold;
-$linkColorHover: lighten( $linkColor, 20% );
+$linkColorHover: lighten($linkColor, 20%);
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 $progressBarColor: $cleverforge;
 // ---------------------------------------------
@@ -48,6 +49,12 @@ $progressBarColor: $cleverforge;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+  }
 }
 
 img.logo {
@@ -68,7 +75,7 @@ img.print-logo {
 
   img.print-logo {
 	display: block;
-	float:right;
+	float: right;
 	width: 20%;
   }
 }
@@ -91,7 +98,7 @@ img.print-logo {
 	  background-color: hexToRgba($editorMainColor, 0.2);
 	}
 	th, td {
-	  border:1px solid hexToRgba($editorMainColor, 0.3);
+	  border: 1px solid hexToRgba($editorMainColor, 0.3);
 	  padding: 5px;
 	}
   }
@@ -109,7 +116,7 @@ img.print-logo {
 	border-color: $editorMainColor;
 	border-left: 10px solid $editorMainColor;
 	box-shadow: 0 0 2px hexToRgba($editorMainColor, 0.5);
-	width:90%;
+	width: 90%;
 
 	cite {
 	  font-style: italic;
@@ -118,7 +125,7 @@ img.print-logo {
 	  margin-top: 1em;
 
 	  &:before {
-		content:"\2013 "
+		content: "\2013 "
 	  }
 	}
   }
@@ -168,7 +175,7 @@ img.print-logo {
   > ul,
   > ol {
 	max-width: 50%;
-	float:left;
+	float: left;
 	font-size: 0.9em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
