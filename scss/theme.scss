@@ -57,6 +57,11 @@ $progressBarColor: $cleverforge;
   }
 }
 
+a.logo {
+  position:absolute;
+  z-index: 1000;
+}
+
 img.logo {
   position: fixed;
   top: 10px;
