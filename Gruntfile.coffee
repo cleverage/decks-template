@@ -174,9 +174,9 @@ module.exports = (grunt) ->
         'Build desks from templates/_deck.html and slides/list.json.',
         ->
             chapters = grunt.file.readJSON 'slides/list.json'
-            slugs = chapters.map (chapter) -> return chapter.slug
+            slugs = chapters.map (chapter) -> return (chapter.slug || null)
 
-            for chapter in slugs
+            for chapter in slugs when chapter isnt null
                 do (chapter) ->
                     deckTemplate = grunt.file.read 'templates/_deck.html'
                     sectionTemplate = grunt.file.read 'templates/_section.html'
