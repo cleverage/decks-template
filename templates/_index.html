@@ -75,7 +75,11 @@
 	<h1>Index des supports</h1>
 	<ul>
 	<% _.forEach(chapters, function(chapter) { %>
-	<li><a href="<%- chapter.slug %>.html" title="<%- chapter.name %>"><%- chapter.name %></a></li>
+	<li> <% if(chapter.slug) { %>
+		<a href="<%- chapter.slug %>.html" title="<%- chapter.name %>"><%- chapter.name %></a>
+	<% } else { %>
+		<%- chapter.name %>
+	<% } %></li>
 	<% }); %>
 </ul>
 	</div>
