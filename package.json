@@ -1,44 +1,44 @@
 {
-    "name": "decks-template",
-    "version": "0.1.0",
-    "description": "A template project for creating several decks of slides, all using the same styles, with Reveal and distinct slide files",
-    "homepage": "https://github.com/borisschapira/decks-template",
-    "author": "Boris Schapira",
-    "keywords": [
-        "reveal",
-        "grunt",
-        "coffee",
-        "sass"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/npm/npm.git"
-    },
-    "bugs": {
-        "url": "https://github.com/borisschapira/decks-template/issues"
-    },
-    "devDependencies": {
-        "grunt": "~0.4.5",
-        "grunt-coffeelint": "0.0.10",
-        "grunt-contrib-clean": "^0.6.0",
-        "grunt-contrib-connect": "~0.7.1",
-        "grunt-contrib-copy": "~0.5.0",
-        "grunt-contrib-imagemin": "^0.9.4",
-        "grunt-contrib-jshint": "~0.10.0",
-        "grunt-contrib-sass": "0.7.3",
-        "grunt-contrib-watch": "~0.6.1",
-        "load-grunt-tasks": "~0.4.0"
-    },
-    "engines": {
-        "node": ">=0.8.0"
-    },
-    "scripts": {
-        "build": "grunt",
-        "serve": "grunt serve",
-        "connect": "grunt connect"
-    },
-    "dependencies": {
-        "grunt-sync": "^0.2.3"
-    },
-    "license": "MIT"
+  "name": "decks-template",
+  "version": "0.1.0",
+  "description": "A template project for creating several decks of slides, all using the same styles, with Reveal and distinct slide files",
+  "homepage": "https://github.com/borisschapira/decks-template",
+  "author": "Boris Schapira",
+  "keywords": [
+    "reveal",
+    "grunt",
+    "coffee",
+    "sass"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/npm/npm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/borisschapira/decks-template/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-coffeelint": "0.0.10",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-sass": "0.7.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "load-grunt-tasks": "~0.4.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "build": "grunt",
+    "serve": "grunt serve",
+    "connect": "grunt connect"
+  },
+  "dependencies": {
+    "grunt-sync": "^0.2.3"
+  },
+  "license": "MIT"
 }

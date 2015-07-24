@@ -36,13 +36,7 @@ module.exports = (grunt) ->
 
             specific_img:
                 files: [
-<<<<<<< Updated upstream
-                    'slides/*/{,*/}*.{png,jpg,gif,svg}'
-||||||| merged common ancestors
-                    'slides/**/*.{png,jpg,gif,svg}'
-=======
                     'slides/**/_images/*.{png,jpg,gif,svg}'
->>>>>>> Stashed changes
                 ]
                 tasks: [
                     'imagemin:specific'
