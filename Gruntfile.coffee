@@ -1,4 +1,7 @@
-# Generated on 2014-10-21 using generator-reveal 0.3.9
+fs = require 'fs'
+glob = require 'glob'
+path = require 'path'
+
 module.exports = (grunt) ->
     grunt.initConfig
 
@@ -180,7 +183,18 @@ module.exports = (grunt) ->
                 do (chapter) ->
                     deckTemplate = grunt.file.read 'templates/_deck.html'
                     sectionTemplate = grunt.file.read 'templates/_section.html'
-                    slides = grunt.file.readJSON 'slides/' + chapter + '/list.json'
+
+                    options = options || {}
+                    options.cwd = 'slides/' + chapter + '/'
+                    options.ignore = '*.json'
+                    slides = glob.sync '[^_]*', options
+                    slides = slides.map (f)->
+                        elementPath = path.join options.cwd, f
+                        fileStats = fs.lstatSync elementPath
+                        if fileStats.isDirectory()
+                            insideFiles = glob.sync f + '/*.{md,html}', options
+                            return insideFiles
+                        return f
 
                     html = grunt.template.process deckTemplate, data:
                         slides:
