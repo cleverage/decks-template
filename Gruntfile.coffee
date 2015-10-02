@@ -192,7 +192,7 @@ module.exports = (grunt) ->
                         elementPath = path.join options.cwd, f
                         fileStats = fs.lstatSync elementPath
                         if fileStats.isDirectory()
-                            insideFiles = glob.sync f + '/*.{md,html}', options
+                            insideFiles = glob.sync f + '/[^_]*.{md,html}', options
                             return insideFiles
                         return f
 
