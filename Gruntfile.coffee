@@ -67,7 +67,7 @@ module.exports = (grunt) ->
                 ]
 
             sass:
-                files: ['scss/theme.scss']
+                files: ['scss/theme.scss', 'scss/print.scss']
                 tasks: [
                     'sass'
                 ]
@@ -76,6 +76,7 @@ module.exports = (grunt) ->
             theme:
                 files:
                     'dist/css/theme.css': 'scss/theme.scss'
+                    'dist/css/print.css': 'scss/print.scss'
 
         connect:
             livereload:

@@ -38,11 +38,16 @@
 	<script type="text/javascript">
 		/*jslint browser: true*/
 		if (window.location.search.match(/print-pdf/gi)) {
-			var link = document.createElement('link');
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = 'bower_components/reveal.js/css/print/pdf.css';
-			document.getElementsByTagName('head')[0].appendChild(link);
+			var defaultPrint = document.createElement('link');
+			defaultPrint.rel = 'stylesheet';
+			defaultPrint.type = 'text/css';
+			defaultPrint.href = 'bower_components/reveal.js/css/print/pdf.css';
+			document.getElementsByTagName('head')[0].appendChild(defaultPrint);
+			var customPrint = document.createElement('link');
+			customPrint.rel = 'stylesheet';
+			customPrint.type = 'text/css';
+			customPrint.href = 'css/print.css';
+			document.getElementsByTagName('head')[0].appendChild(customPrint);
 		}
 	</script>
 </head>
