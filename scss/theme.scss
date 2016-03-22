@@ -99,6 +99,7 @@ img.print-logo {
   table {
 	border-collapse: collapse;
 	border: 1px;
+  font-size: 0.7em;
 	thead {
 	  background-color: hexToRgba($editorMainColor, 0.2);
 	}
