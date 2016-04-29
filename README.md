@@ -5,7 +5,6 @@ A template project for creating several decks of slides, all using the same styl
 # Installation
 
 ```
-git clone https://github.com/borisschapira/decks-template.git;
 npm install;
 bower install;
 ```
