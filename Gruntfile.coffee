@@ -185,17 +185,20 @@ module.exports = (grunt) ->
                     deckTemplate = grunt.file.read 'templates/_deck.html'
                     sectionTemplate = grunt.file.read 'templates/_section.html'
 
-                    options = options || {}
-                    options.cwd = 'slides/' + chapter + '/'
-                    options.ignore = '*.json'
-                    slides = glob.sync '[^_]*', options
-                    slides = slides.map (f)->
-                        elementPath = path.join options.cwd, f
-                        fileStats = fs.lstatSync elementPath
-                        if fileStats.isDirectory()
-                            insideFiles = glob.sync f + '/[^_]*.{md,html}', options
-                            return insideFiles
-                        return f
+                    if grunt.file.exists 'slides/' + chapter + '/list.json'
+                        slides = grunt.file.readJSON 'slides/' + chapter + '/list.json'
+                    else
+                        options = options || {}
+                        options.cwd = 'slides/' + chapter + '/'
+                        options.ignore = '*.json'
+                        slides = glob.sync '[^_]*', options
+                        slides = slides.map (f)->
+                            elementPath = path.join options.cwd, f
+                            fileStats = fs.lstatSync elementPath
+                            if fileStats.isDirectory()
+                                insideFiles = glob.sync f + '/[^_]*.{md,html}', options
+                                return insideFiles
+                            return f
 
                     html = grunt.template.process deckTemplate, data:
                         slides:
