@@ -1,17 +1,23 @@
 ---
-layout: slides
+layout: default
 title: Jekyll and reveal.js
 description: A presentation slide for how to use reveal.js in Jekyll
-theme: white
-transition: slide
 ---
 
-{% for slide in site.slides %}
+<ul>
+{% for deck in site.decks %}
+<li>
+  <a href="{{deck.url}}">{{ deck.title }}</a>
+</li>
+{% endfor %}
+</ul>
+
+<!-- {% for slide in site.slides %}
   <section>
     {{ slide.content }}
     <hr/>
     Profondeur : {{ slide.depth }}
     <hr/>
-    Deck : {{ slide.deck }}
+    Deck : {{ slide.category }}
   </section>
-{% endfor %}
+{% endfor %} -->

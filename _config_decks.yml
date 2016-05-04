@@ -2,20 +2,23 @@
 collections:
   slides :
     output: false
-  decks:
-    - title: "Kyrie"
-      slug: "01"
-    - title: "Gloria"
-      slug: "02"
+  decks :
+    output: true
 
 defaults:
+  - scope:
+      type: decks
+    values:
+      layout: deck
+      theme: white
+      transition: slide
   - scope:
       path: "_slides/01"
       type: slides
     values:
-      deck: "Kyrie"
+      category: kyrie
   - scope:
       path: "_slides/02"
       type: slides
     values:
-      deck: "Gloria"
+      category: gloria
