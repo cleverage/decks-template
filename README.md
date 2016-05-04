@@ -2,10 +2,15 @@
 
 A template project for creating several decks of slides, all using the same styles, with Reveal and distinct slide files.
 
+# Dependances
+
+* bundle
+* bower
+
 # Installation
 
 ```
-npm install;
+bundle install --path vendor/bundle
 bower install;
 ```
 

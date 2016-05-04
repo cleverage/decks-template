@@ -1,3 +1,0 @@
-@function hexToRgba($color, $opacity : 1){
-  @return rgba( red($color), green($color), blue($color), $opacity );
-}
