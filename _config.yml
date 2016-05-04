@@ -22,7 +22,8 @@ markdown: kramdown
 
 # Collections
 collections:
-  - slides
+  slides:
+    output: true
 
 # Exclusions
 exclude:

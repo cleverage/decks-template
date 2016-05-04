@@ -10,5 +10,7 @@ transition: slide
 {% for slide in site.slides %}
 <section>
     {{ slide.content }}
+    <hr/>
+	{{ slide.depth }}
 </section>
 {% endfor %}
