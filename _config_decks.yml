@@ -1,0 +1,21 @@
+# Collections
+collections:
+  slides :
+    output: false
+  decks:
+    - title: "Kyrie"
+      slug: "01"
+    - title: "Gloria"
+      slug: "02"
+
+defaults:
+  - scope:
+      path: "_slides/01"
+      type: slides
+    values:
+      deck: "Kyrie"
+  - scope:
+      path: "_slides/02"
+      type: slides
+    values:
+      deck: "Gloria"

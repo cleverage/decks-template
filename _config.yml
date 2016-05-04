@@ -20,11 +20,6 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
-# Collections
-collections:
-  slides:
-    output: true
-
 # Exclusions
 exclude:
   - ".cache"

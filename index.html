@@ -6,11 +6,12 @@ theme: white
 transition: slide
 ---
 
-
 {% for slide in site.slides %}
-<section>
+  <section>
     {{ slide.content }}
     <hr/>
-	{{ slide.depth }}
-</section>
+    Profondeur : {{ slide.depth }}
+    <hr/>
+    Deck : {{ slide.deck }}
+  </section>
 {% endfor %}
