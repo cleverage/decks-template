@@ -29,7 +29,7 @@ class SlideMetaDataGenerator < Jekyll::Generator
 
       # Get depth from slide path
       arrayFilePath = slide.relative_path.split('/');
-      slide.data["depth"] = arrayFilePath.size - 2
+      slide.data["depth"] = arrayFilePath.size - 3
 
       cursus_key = arrayFilePath[1];
 		  slide.data["cursus"] = site.collections["cursus"].docs.find {|cursus| cursus.data["key"] == cursus_key}
