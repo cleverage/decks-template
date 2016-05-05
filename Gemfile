@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem 'jekyll'
-# gem 'i18n'
+gem 'rake'
+gem 'jekyll', :github => 'jekyll', :branch => 'master'
 
 group :jekyll_tests do
   gem 'ffi', :github => 'ffi/ffi', :branch => 'elcapt'

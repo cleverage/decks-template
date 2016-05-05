@@ -5,6 +5,21 @@ GIT
   specs:
     ffi (1.9.10)
 
+GIT
+  remote: git://github.com/jekyll/jekyll.git
+  revision: b7bf19ff3143fae9cbf36413dda330febe6d0746
+  branch: master
+  specs:
+    jekyll (3.1.2)
+      colorator (~> 1.0)
+      jekyll-sass-converter (~> 1.0)
+      jekyll-watch (~> 1.1)
+      kramdown (~> 1.3)
+      liquid (~> 3.0)
+      mercenary (~> 0.3.3)
+      rouge (~> 1.7)
+      safe_yaml (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -15,7 +30,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    colorator (0.1)
+    colorator (1.0.0)
     colored (1.2)
     ethon (0.9.0)
       ffi (>= 1.3.0)
@@ -29,15 +44,6 @@ GEM
       typhoeus (~> 0.7)
       yell (~> 2.0)
     i18n (0.7.0)
-    jekyll (3.1.3)
-      colorator (~> 0.1)
-      jekyll-sass-converter (~> 1.0)
-      jekyll-watch (~> 1.1)
-      kramdown (~> 1.3)
-      liquid (~> 3.0)
-      mercenary (~> 0.3.3)
-      rouge (~> 1.7)
-      safe_yaml (~> 1.0)
     jekyll-sass-converter (1.4.0)
       sass (~> 3.4)
     jekyll-watch (1.4.0)
@@ -54,6 +60,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     parallel (1.8.0)
+    rake (0.9.6)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -73,7 +80,8 @@ PLATFORMS
 DEPENDENCIES
   ffi!
   html-proofer
-  jekyll
+  jekyll!
+  rake
 
 BUNDLED WITH
    1.11.2
