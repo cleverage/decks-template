@@ -4,8 +4,8 @@
     <meta charset="utf-8">
 
     <title>
-      {% if page.title %}
-        {{ page.title }} | {{ site.title }}
+      {% if page.title and page.cursus %}
+        {{ page.title }} - {{ page.cursus }} | {{ site.title }}
       {% else %}
         {{ site.title }}
       {% endif %}
@@ -57,15 +57,9 @@
 
     <div class="reveal">
       <div class="slides">
-        {% assign the_slides= site.slides | where:"category", page.category %}
+        {% assign the_slides= site.slides | where:"deck", page %}
 				{% for slide in the_slides %}
-				  <section>
-				    {{ slide.content }}
-				    <hr/>
-				    Profondeur : {{ slide.depth }}
-				    <hr/>
-				    Deck : {{ slide.category }}
-				  </section>
+					{% include slide.html %}
 				{% endfor %}
       </div>
     </div>

@@ -1,8 +1,10 @@
 # Collections
 collections:
   slides :
-    output: false
+    output: true
   decks :
+    output: true
+  cursus :
     output: true
 
 defaults:
@@ -13,12 +15,10 @@ defaults:
       theme: white
       transition: slide
   - scope:
-      path: "_slides/01"
       type: slides
     values:
-      category: kyrie
+      layout: slide
   - scope:
-      path: "_slides/02"
-      type: slides
+      type: cursus
     values:
-      category: gloria
+      layout: cursus

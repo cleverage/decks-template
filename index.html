@@ -5,9 +5,9 @@ description: A presentation slide for how to use reveal.js in Jekyll
 ---
 
 <ul>
-{% for deck in site.decks %}
+{% for cursus in site.cursus %}
 <li>
-  <a href="{{deck.url}}">{{ deck.title }}</a>
+  <a href="{{cursus.url}}">{{ cursus.title }} ({{cursus.key}})</a>
 </li>
 {% endfor %}
 </ul>

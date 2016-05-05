@@ -1,0 +1,15 @@
+---
+layout: default
+title: Jekyll and reveal.js
+description: A presentation slide for how to use reveal.js in Jekyll
+---
+
+<ul>
+  {{ page | json}}
+{% assign the_decks = site.decks | where:"cursus", page %}
+{% for deck in the_decks %}
+<li>
+  <a href="{{deck.url}}">{{ deck.title }} ({{deck.key}}) [{{deck.cursus.key}}]</a>
+</li>
+{% endfor %}
+</ul>
