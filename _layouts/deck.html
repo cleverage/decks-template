@@ -60,7 +60,6 @@
         {% assign the_slides= site.slides | where:"deck", page %}
 				{% assign previous_depth = 1 %}
 				{% for slide in the_slides %}
-          <!-- depth: {{ slide.depth }} | previous: {{ previous_depth }} -->
 					{% if slide.depth > previous_depth %}
 						<section>
 					{% elsif slide.depth < previous_depth %}

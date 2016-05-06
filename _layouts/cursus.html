@@ -8,7 +8,7 @@ layout: default
 {% assign the_decks = site.decks | where:"cursus", page %}
 {% for deck in the_decks %}
 <li>
-  <a href="{{deck.url}}">{{ deck.title }}</a>
+  <a href="{{ site.baseurl }}{{deck.url}}">{{ deck.title }}</a>
 </li>
 {% endfor %}
 </ul>
