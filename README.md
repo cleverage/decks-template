@@ -1,4 +1,4 @@
-# Decks Template ([Demo](borisschapira.github.io/decks-template/))
+# Decks Template ([Demo](http://borisschapira.github.io/decks-template/))
 
 Decks Template is an example of how you can use Jekyll to manage different training programs, each of them composer of several decks of slides, organized by chapters.
 
