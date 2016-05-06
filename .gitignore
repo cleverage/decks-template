@@ -2,6 +2,7 @@
 _site/
 .sass-cache/
 .jekyll-metadata
-/vendor/
 
-# Ignore slides
+# Ignore bundler vendors and config
+/.bundle
+/vendor/
