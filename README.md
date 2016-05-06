@@ -1,18 +1,29 @@
-# decks-template
+# Decks Template
 
-A template project for creating several decks of slides, all using the same styles, with Reveal and distinct slide files.
+Decks Template is an example of how you can use Jekyll to manage different training programs, each of them composer of several decks of slides, organized by chapters.
 
-# Dependances
+It makes a heavy use of Jekyll's collections:
 
-* bundle
-* bower
+- training programs, or as I call them "cursus", are a collection
+- decks inside of each programs, are also a collection
+- slides inside the decks are also a collection
+
+In order to know which slide goes in which deck goes in which cursus, you will need to always name them the same way. That's all. _Convention over configuration_.
+
+# Prerequisites
+
+* [Git](http://git-scm.com/)
+* Ruby and [Bundler](http://bundler.io/)
 
 # Installation
 
 ```
 bundle install --path vendor/bundle
-bower install;
 ```
+
+# Usage
+
+
 
 Rename `slides_samples` to `slides` and there you go with a :
 

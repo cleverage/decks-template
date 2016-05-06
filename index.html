@@ -1,23 +1,13 @@
 ---
 layout: default
-title: Jekyll and reveal.js
-description: A presentation slide for how to use reveal.js in Jekyll
 ---
+
+<h2>Available trainings</h2>
 
 <ul>
 {% for cursus in site.cursus %}
 <li>
-  <a href="{{cursus.url}}">{{ cursus.title }} ({{cursus.key}})</a>
+  <a href="{{cursus.url}}">{{ cursus.title }}</a>
 </li>
 {% endfor %}
 </ul>
-
-<!-- {% for slide in site.slides %}
-  <section>
-    {{ slide.content }}
-    <hr/>
-    Profondeur : {{ slide.depth }}
-    <hr/>
-    Deck : {{ slide.category }}
-  </section>
-{% endfor %} -->

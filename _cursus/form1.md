@@ -1,3 +1,3 @@
 ---
-title: Apprendre Jekyll en 7 étapes
+title: "How to learn Jekyll in 2 chapters"
 ---

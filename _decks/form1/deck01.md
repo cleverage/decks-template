@@ -1,3 +1,3 @@
 ---
-title: Chapitre 1
+title: Learn Jekyll
 ---

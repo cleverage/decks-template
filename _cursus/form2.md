@@ -1,3 +1,3 @@
 ---
-title: Devenez un pro de la roulette russe en 6 essais
+title: "Russian roulette: the essential"
 ---

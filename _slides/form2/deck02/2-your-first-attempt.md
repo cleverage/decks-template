@@ -2,6 +2,8 @@
 # You can insert information in the Front-Matter if needed
 ---
 
-## Houray!
+## Second attempt
 
-You are now a Jekyll contributor
+Pull the trigger…
+
+PAN!!

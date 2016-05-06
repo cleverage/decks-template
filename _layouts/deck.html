@@ -5,7 +5,7 @@
 
     <title>
       {% if page.title and page.cursus %}
-        {{ page.title }} - {{ page.cursus }} | {{ site.title }}
+        {{ page.title }} | {{ page.cursus.title }} | {{ site.title }}
       {% else %}
         {{ site.title }}
       {% endif %}
