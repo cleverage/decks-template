@@ -27,7 +27,11 @@
 
     <link rel="stylesheet" href="{{ "/assets/revealjs/css/reveal.css" | prepend: site.baseurl }}"/>
     {%if page.theme %}
-      <link rel="stylesheet" href="{{ "/assets/revealjs/css/theme/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
+			{% if page.theme == "clever" %}
+        <link rel="stylesheet" href="{{ "/css/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
+			{% else %}
+			   <link rel="stylesheet" href="{{ "/assets/revealjs/css/theme/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
+			{% endif %}
     {% else %}
       <link rel="stylesheet" href="{{ "/assets/revealjs/css/theme/black.css" | prepend: site.baseurl }}" id="theme"/>
     {% endif %}
@@ -54,11 +58,30 @@
   </head>
 
   <body>
+    <a class="logo" href="../"><img class="logo" src="{{ "/assets/images/logo.svg" | prepend: site.baseurl }}"
+	 title="Logo"></a>
+    {% assign the_slides= site.slides | where:"deck", page %}
+    {% assign previous_depth = 1 %}
+    <noscript>
+      <h1>{{ page.title }}</h1>
+      <ul>
+        {% for slide in the_slides %}
+          {% if slide.depth > previous_depth %}
+            <ul>
+          {% elsif slide.depth < previous_depth %}
+            </ul>
+          {% endif %}
 
+          <li>
+            <a href="{{ slide.url | prepend: site.baseurl }}">{{ slide.title }}</a>
+          </li>
+
+          {% assign previous_depth = slide.depth %}
+        {% endfor %}
+      </ul>
+    </noscript>
     <div class="reveal">
       <div class="slides">
-        {% assign the_slides= site.slides | where:"deck", page %}
-				{% assign previous_depth = 1 %}
 				{% for slide in the_slides %}
 					{% if slide.depth > previous_depth %}
 						<section>

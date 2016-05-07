@@ -2,18 +2,21 @@
 collections:
   slides :
     output: true
+    permalink: /:path/
   decks :
     output: true
+    permalink: /:path/
   cursus :
     output: true
+    permalink: /:path/
 
 defaults:
   - scope:
       type: decks
     values:
       layout: deck
-      theme: white
-      transition: slide
+      theme: clever
+      transition: fade
   - scope:
       type: slides
     values:

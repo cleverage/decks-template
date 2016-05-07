@@ -1,14 +1,10 @@
-/**
- * Default theme for reveal.js.
- *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
- */
-// This file has been copied over from
-// ../../bower_components/reveal.js/css/theme/source/default.scss
-// Default mixins and settings -----------------
-@import "./default/mixins";
-@import "./mixins";
-@import "./default/settings";
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import "../assets/revealjs/css/theme/template/mixins";
+@import "../assets/revealjs/css/theme/template/settings";
 
 // ---------------------------------------------
 
@@ -34,7 +30,7 @@ $progressBarColor: $cleverforge;
 // ---------------------------------------------
 
 // Theme template ------------------------------
-@import "./default/theme";
+@import "../assets/revealjs/css/theme/template/theme";
 // ---------------------------------------------
 
 // Background generator ------------------------
@@ -69,19 +65,19 @@ img.logo {
   width: 20vh;
 }
 
-img.print-logo {
+.print-logo img {
   display: none;
 }
 
 .print-pdf {
-  img.logo {
-	display: none;
+  .logo img {
+	  display: none;
   }
 
-  img.print-logo {
-	display: block;
-	float: right;
-	width: 20%;
+  .print-logo img {
+  	display: block;
+  	float: right;
+  	width: 20%;
   }
 }
 
@@ -145,12 +141,17 @@ img.print-logo {
   }
 
   // Specific headers
-  h3.stack-title {
-	font-family: Arial, Helvetica, sans-serif;
-	color: rgb(200, 161, 81);
-  }
-  h2.stack-title {
-	text-transform: uppercase;
+  .first {
+    h1 {
+      color: rgb(200, 161, 81);
+    }
+    h2 {
+  	  text-transform: uppercase;
+    }
+    h3 {
+  	  font-family: Arial, Helvetica, sans-serif;
+  	  color: rgb(200, 161, 81);
+    }
   }
 
   // Listing

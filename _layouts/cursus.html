@@ -8,7 +8,7 @@ layout: default
 {% assign the_decks = site.decks | where:"cursus", page %}
 {% for deck in the_decks %}
 <li>
-  <a href="{{ site.baseurl }}{{deck.url}}">{{ deck.title }}</a>
+  <a href="{{ deck.url | prepend: site.baseurl }}" title="{{ deck.title }}">{{ deck.title }}</a> <a href="{{ deck.url | prepend: site.baseurl | append: "?print-pdf" }}" title="{{ deck.title }} au format print">&#9112;</a>
 </li>
 {% endfor %}
 </ul>

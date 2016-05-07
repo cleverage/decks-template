@@ -7,7 +7,7 @@ layout: default
 <ul>
 {% for cursus in site.cursus %}
 <li>
-  <a href="{{ site.baseurl }}{{cursus.url}}">{{ cursus.title }}</a>
+  <a href="{{ cursus.url | prepend: site.baseurl }}">{{ cursus.title }}</a>
 </li>
 {% endfor %}
 </ul>
