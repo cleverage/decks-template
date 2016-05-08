@@ -6,13 +6,20 @@ class SlideMetaDataGenerator < Jekyll::Generator
 
 		site.collections["cursus"].docs.each do |cursus|
       cursus.data["key"] = File.basename(cursus.relative_path, ".md")
+			cursus.data["decks"] = []
 		end
 
     site.collections["decks"].docs.each do |deck|
       arrayFilePath = deck.relative_path.split('/');
   		cursus_key = arrayFilePath[1];
-      deck.data["cursus"] = site.collections["cursus"].docs.find {|cursus| cursus.data["key"] == cursus_key}
+
+      cursus = site.collections["cursus"].docs.find {|cursus| cursus.data["key"] == cursus_key}
+      deck.data["cursus"] = cursus
+
+      cursus.data["decks"].push(deck)
+
       deck.data["key"] = to_deck_absolute_key(cursus_key, File.basename(deck.relative_path, ".md"))
+			deck.data["slides"] = []
     end
 
     site.collections["slides"].docs.each do |slide|
@@ -29,6 +36,7 @@ class SlideMetaDataGenerator < Jekyll::Generator
       deck_key = to_deck_absolute_key(arrayFilePath[1], arrayFilePath[2])
       deck = site.collections["decks"].docs.find {|deck| deck.data["key"] == deck_key}
       slide.data["deck"] = deck
+      deck.data["slides"].push(slide)
 
       # Get title from slide if not define in Front Matter
       if slide.data["has_deck_title"] == true

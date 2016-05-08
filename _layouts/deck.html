@@ -60,12 +60,11 @@
   <body>
     <a class="logo" href="../"><img class="logo" src="{{ "/assets/images/arrow-up.svg" | prepend: site.baseurl }}"
 	 title="Logo"></a>
-    {% assign the_slides= site.slides | where:"deck", page %}
     {% assign previous_depth = 1 %}
     <noscript>
       <h1>{{ page.title }}</h1>
       <ul>
-        {% for slide in the_slides %}
+        {% for slide in page.slides %}
           {% if slide.depth > previous_depth %}
             <ul>
           {% elsif slide.depth < previous_depth %}
@@ -82,7 +81,7 @@
     </noscript>
     <div class="reveal">
       <div class="slides">
-				{% for slide in the_slides %}
+				{% for slide in page.slides %}
 					{% if slide.depth > previous_depth %}
 						<section>
 					{% elsif slide.depth < previous_depth %}

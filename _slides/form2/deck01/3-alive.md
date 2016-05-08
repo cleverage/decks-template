@@ -1,5 +1,5 @@
 ---
-title: First Slide
+# You can insert information in the Front-Matter if needed
 ---
 
 ## Congratulations

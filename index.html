@@ -6,8 +6,8 @@ layout: default
 
 <ul>
 {% for cursus in site.cursus %}
-<li>
-  <a href="{{ cursus.url | prepend: site.baseurl }}">{{ cursus.title }}</a>
-</li>
+  <li>
+    <a href="{{ cursus.url | prepend: site.baseurl }}">{{ cursus.title }}</a>
+  </li>
 {% endfor %}
 </ul>

@@ -27,6 +27,8 @@
 
     <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}" />
 
+		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!--[if lt IE 9]>
@@ -37,5 +39,22 @@
   <body>
     {% assign slide=page %}
 		{% include slide.html %}
+
+    {% for item in slide.deck.slides  %}
+      {% if item.deck.key == slide.deck.key and item.cursus.key == slide.cursus.key %}
+        {% if item.title == page.title %}
+          {% unless forloop.first %}
+            {% assign prevurl = prev.url %}
+          {% endunless %}
+          {% unless forloop.last %}
+            {% assign next = slide.deck.slides[forloop.index] %}
+            {% assign nexturl = next.url %}
+          {% endunless %}
+        {% endif %}
+        {% assign prev = item %}
+      {% endif %}
+    {% endfor %}
+    {%if prevurl%}<a href="{{prevurl | prepend: site.baseurl}}">previous</a>{%endif%}
+    {%if nexturl%}<a href="{{nexturl | prepend: site.baseurl}}">next</a>{%endif%}
   </body>
 </html>
