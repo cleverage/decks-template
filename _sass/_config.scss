@@ -1,0 +1,22 @@
+$editorMainColor: #c8a151;
+$color-lvl-1: #667d18;
+$color-lvl-2: #007eb1;
+$color-lvl-3: #c74917;
+
+
+// Override theme settings ---------------------
+$headingMargin: 40px 0 40px 0 !important;
+$mainFont: Georgia, "Times New Roman", Times, serif;
+$mainColor: #000;
+$headingFont: Arial, Helvetica, sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$coloredBackgroundColor: lighten($editorMainColor, 30%);
+$borderColor: $editorMainColor;
+$linkColor: $editorMainColor;
+$linkColorHover: lighten($linkColor, 20%);
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+$progressBarColor: $color-lvl-2;
+$color-grey: rgb(85, 90, 95);

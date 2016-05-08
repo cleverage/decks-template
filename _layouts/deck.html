@@ -58,7 +58,7 @@
   </head>
 
   <body>
-    <a class="logo" href="../"><img class="logo" src="{{ "/assets/images/logo.svg" | prepend: site.baseurl }}"
+    <a class="logo" href="../"><img class="logo" src="{{ "/assets/images/arrow-up.svg" | prepend: site.baseurl }}"
 	 title="Logo"></a>
     {% assign the_slides= site.slides | where:"deck", page %}
     {% assign previous_depth = 1 %}
@@ -102,10 +102,12 @@
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				slideNumber: true,
+
         {%if page.transition %}
           transition: '{{page.transition}}',
         {% else %}
