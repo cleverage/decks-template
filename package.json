@@ -2,8 +2,14 @@
   "name": "decks-template",
   "version": "0.1.0",
   "description": "A template project for creating several decks of slides, all using the same styles, with Reveal and distinct slide files",
-  "homepage": "https://github.com/borisschapira/decks-template",
-  "author": "Boris Schapira",
+  "homepage": "https://github.com/cleverage/decks-template",
+  "contributors": [
+    {
+      "name" : "Boris Schapira",
+      "email" : "borisschapira@gmail.com",
+      "url" : "https://github.com/borisschapira/decks-template"
+    }
+	],
   "keywords": [
     "reveal",
     "grunt",
@@ -15,7 +21,7 @@
     "url": "http://github.com/npm/npm.git"
   },
   "bugs": {
-    "url": "https://github.com/borisschapira/decks-template/issues"
+    "url": "https://github.com/cleverage/decks-template/issues"
   },
   "devDependencies": {
     "glob": "^5.0.15",
