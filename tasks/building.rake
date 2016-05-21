@@ -18,7 +18,7 @@ namespace :build do
     end
 
     puts 'Building…'
-    jekyll('serve')
+    jekyll('serve --trace')
   end
   task :serve => :preview
 

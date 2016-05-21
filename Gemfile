@@ -9,14 +9,6 @@ group :jekyll_tests do
 end
 
 group :jekyll_plugins do
-  # gem 'jekyll-assets'
-  # gem 'jekyll-tagging-related_posts'
-  # gem 'jekyll-responsive_image', :github => 'wildlyinaccurate/jekyll-responsive-image'
-  # gem 'jekyll-sitemap'
-  # gem 'jekyll-archives'
-  # gem 'algoliasearch-jekyll'
-  # gem 'octopress-autoprefixer'
-  # gem 'octopress-debugger'
-  # gem 'jekyll-compose'
-  # gem 'jemoji'
+  gem 'jekyll-assets', :github => 'jekyll/jekyll-assets', :branch => 'master'
+  gem 'jekyll-livereload'
 end

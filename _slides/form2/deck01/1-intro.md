@@ -3,7 +3,7 @@
 has_deck_title: true
 ---
 {: .print-logo}
-![Logo]({{ "/assets/images/logo.svg" | prepend:site.baseurl }})
+![Logo](images/logo.svg "Ceci est un logo")
 
 # {{ page.deck.title }}
 
