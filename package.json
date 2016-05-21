@@ -41,7 +41,8 @@
     "grunt-sync": "^0.2.3"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": "6.2.0",
+    "npm": "3.9.2"
   },
   "scripts": {
     "build": "grunt",
