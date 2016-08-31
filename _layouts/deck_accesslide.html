@@ -1,0 +1,116 @@
+---
+layout: microtypo
+asset-folder: "/assets/accesslide"
+---
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+
+<head>
+	{% include head_deck.html %}
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="{{ "/css/font/small.css" | prepend: layout.asset-folder | prepend: site.baseurl }}" type="text/css" media="screen">
+	<link rel="stylesheet" href="{{ "/css/style.css" | prepend: layout.asset-folder | prepend: site.baseurl }}" type="text/css" media="screen">
+	<!-- Theme stylesheet -->
+	<link rel="stylesheet" id="currentCSS" href="{{ "/css/themes/default.min.css" | prepend: layout.asset-folder | prepend: site.baseurl }}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{ "/css/print.css" | prepend: layout.asset-folder | prepend: site.baseurl }}" type="text/css" media="print">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="{{ "/AccesSlide.js" | prepend: layout.asset-folder | prepend: site.baseurl }}"></script>
+	<script src="{{ "/lang/lang_fr.js" | prepend: layout.asset-folder | prepend: site.baseurl }}"></script>
+	<script src="{{ "/highlight/highlight.pack.js" | prepend: layout.asset-folder | prepend: site.baseurl }}"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<style>
+		.lang-btn{position:absolute;text-decoration:none;font-size:70%;right:20px;border-top:0;padding:0 5px 3px 5px;border-radius:0 0 3px 3px;z-index:900;box-shadow:0 0 2px #999;background:#fafafa}
+		.lang-btn:hover,.lang-btn:focus{background:#f2f2f2;}
+	</style>
+</head>
+
+<body>
+	<noscript>
+			<h1>{{ page.title }}</h1>
+			<ul>
+				{% assign the_first_slide = page.slides | first %}
+				{% assign the_first_path_array = the_first_slide.path | split:"/" %}
+				{% assign previous_depth = 1 %}
+				{% assign previous_root = the_first_path_array[3] %}
+
+				{% for slide in page.slides %}
+
+					{% assign the_path_array = slide.path | split:"/" %}
+					{% assign the_depth = the_path_array | size %}
+					{% assign the_root = the_path_array[3] %}
+
+					{% if the_root != previous_root %}
+						{% assign previous_root = the_root %}
+						</ul><ul>
+					{% elsif the_depth > previous_depth %}
+						{% assign previous_depth = depth %}
+						<ul>
+					{% elsif the_depth < previous_depth %}
+						{% assign previous_depth = depth %}
+						</ul>
+					{% endif %}
+
+					<li>
+						<a href="{{ slide.url | prepend: site.baseurl }}">{{ slide.title }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<a href="{{ page.cursus.url | prepend: site.baseurl }}">Back</a>
+		</noscript>
+
+		<div id="screen" class="modeplan" data-effect="Eno">
+
+			<div id="volet"></div>
+
+			<header id="banner" role="banner" class="main-header clearfix">
+				<h1 class="main-title"><a href="{{ page.cursus.url | prepend: site.baseurl }}">{{ page.cursus.title }}</a> > {{ page.title }}</h1>
+			</header>
+
+			<div id="nav" class="tool-bar footer-nav clearfix">
+				<div id="wrappernav">
+				</div>
+			</div>
+
+			<nav role="navigation" id="sommaire" class="tool-block tool-block-summary" tabindex="-1"></nav>
+
+			<div id="wrapper">
+
+				<main role="main" id="main">
+					{% assign the_first_slide = page.slides | first %}
+					{% assign the_first_path_array = the_first_slide.path | split:"/" %}
+					{% assign previous_depth = 1 %} {% assign previous_root = the_first_path_array[3] %}
+
+					{% for slide in page.slides %}
+						{% assign the_path_array = slide.path | split:"/" %}
+						{% assign the_depth = the_path_array | size %}
+						{% assign the_root = the_path_array[3] %}
+
+						{% if the_root != previous_root %}
+							{% assign previous_root = the_root %}
+							</section>
+							<section>
+						{% elsif the_depth > previous_depth %}
+							{% assign previous_depth = depth %}
+							<section>
+						{% elsif the_depth < previous_depth %}
+							{% assign previous_depth=d epth %} </section>
+						{% endif %}
+
+						{% include slide.html %}
+					{% endfor %}
+				</main>
+			</div>
+
+			<div id="setting" class="tool-block tool-block-settings " role="dialog" tabindex="-1" style="display:none"></div>
+		</div>
+
+		<div id="Caudio"></div>
+		<div id="Dcourante" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
+		<script src="{{ "/slide.js" | prepend: layout.asset-folder | prepend: site.baseurl }}"></script>
+		<script src="{{ "/afontgarde.js" | prepend: layout.asset-folder | prepend: site.baseurl }}"></script>
+		<script>
+			AFontGarde( 'FontAwesome', '\uE600\uE601\uE602\uE605');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+.print-logo {
+	display: none;
+	width: 30px;
+}
+@media print {
+  .print-logo {
+		display: block;
+	}
+}

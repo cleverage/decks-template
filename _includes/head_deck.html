@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<title>
+	{% if page.title and page.cursus %}
+		{{ page.title }} | {{ page.cursus.title }} | {{ site.title }}
+	{% else %}
+		{{ site.title }}
+	{% endif %}
+</title>
+<meta name="author" content="{{ site.author.name }}" />
+
+<!-- Description -->
+{% if page.description %}
+	<meta name="description" content="{{ page.description }}" />
+{% else %}
+	<meta name="description" content="{{ site.description }}">
+{% endif %}
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
