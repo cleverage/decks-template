@@ -1,28 +1,21 @@
-GIT
-  remote: git://github.com/ffi/ffi.git
-  revision: 250ed0d3ccc77c397fd46b65d94b6b502feb850f
-  branch: elcapt
+GEM
+  remote: https://rubygems.org/
   specs:
-    ffi (1.9.10)
-
-GIT
-  remote: git://github.com/jekyll/jekyll-assets.git
-  revision: b72a19f97efff8f687b4b6164e0fd68aafa7dd1f
-  branch: master
-  specs:
-    jekyll-assets (2.2.7)
-      extras (~> 0.1)
-      fastimage (~> 2.0, >= 1.8)
-      jekyll (~> 3.1, >= 3.0)
-      pathutil (>= 0.8)
-      sprockets (~> 3.3)
-
-GIT
-  remote: git://github.com/jekyll/jekyll.git
-  revision: 498324bbffc282ca0503c6a0f18ca63df7a2db8a
-  branch: master
-  specs:
-    jekyll (3.2.0.pre.beta1)
+    addressable (2.4.0)
+    colorator (1.1.0)
+    concurrent-ruby (1.0.2)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    eventmachine (1.2.0.1)
+    extras (0.1.0)
+      forwardable-extended (~> 2.5)
+    fastimage (2.0.0)
+      addressable (~> 2)
+    ffi (1.9.14)
+    forwardable-extended (2.6.0)
+    http_parser.rb (0.6.0)
+    jekyll (3.2.1)
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 1.1)
@@ -32,91 +25,55 @@ GIT
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-
-GEM
-  remote: https://rubygems.org/
-  specs:
-    activesupport (4.2.6)
-      i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
-      minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
-      tzinfo (~> 1.1)
-    addressable (2.4.0)
-    colorator (1.0.0)
-    colored (1.2)
-    concurrent-ruby (1.0.2)
-    em-websocket (0.5.1)
-      eventmachine (>= 0.12.9)
-      http_parser.rb (~> 0.6.0)
-    ethon (0.9.0)
-      ffi (>= 1.3.0)
-    eventmachine (1.2.0.1)
-    extras (0.1.0)
-      forwardable-extended (~> 2.5)
-    fastimage (2.0.0)
-      addressable (~> 2)
-    forwardable-extended (2.6.0)
-    html-proofer (3.0.6)
-      activesupport (~> 4.2)
-      addressable (~> 2.3)
-      colored (~> 1.2)
-      mercenary (~> 0.3.2)
-      nokogiri (~> 1.5)
-      parallel (~> 1.3)
-      typhoeus (~> 0.7)
-      yell (~> 2.0)
-    http_parser.rb (0.6.0)
-    i18n (0.7.0)
-    jekyll-livereload (0.1.1.1)
+    jekyll-assets (2.2.8)
+      extras (~> 0.1)
+      fastimage (~> 2.0, >= 1.8)
+      jekyll (~> 3.1, >= 3.0)
+      pathutil (>= 0.8)
+      rack (> 1, < 2)
+      sprockets (~> 3.3, < 3.7)
+    jekyll-livereload (0.2.1)
       em-websocket (~> 0.5)
       jekyll (~> 3.0)
+    jekyll-microtypo (0.0.6)
+      jekyll (>= 3.0, < 4.0)
     jekyll-sass-converter (1.4.0)
       sass (~> 3.4)
-    jekyll-watch (1.4.0)
+    jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    json (1.8.3)
-    kramdown (1.11.1)
+    kramdown (1.12.0)
     liquid (3.0.6)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    mini_portile2 (2.0.0)
-    minitest (5.9.0)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
-    parallel (1.8.0)
+    mini_portile2 (2.1.0)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
+    pkg-config (1.1.7)
     rack (1.6.4)
-    rake (11.1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    rouge (1.10.1)
+    rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.22)
-    sprockets (3.6.0)
+    sprockets (3.6.3)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    thread_safe (0.3.5)
-    typhoeus (0.8.0)
-      ethon (>= 0.8.0)
-    tzinfo (1.2.2)
-      thread_safe (~> 0.1)
-    yell (2.0.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  ffi!
-  html-proofer
-  jekyll!
-  jekyll-assets!
+  jekyll
+  jekyll-assets
   jekyll-livereload
-  rake
+  jekyll-microtypo
+  nokogiri
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

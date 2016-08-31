@@ -14,6 +14,7 @@ timezone: Europe/Paris
 incremental: true
 profile: true
 encoding: utf-8
+author: Boris Schapira
 
 # Build settings
 markdown: kramdown
@@ -23,7 +24,6 @@ exclude:
   - ".cache"
   - "scripts"
   - "tasks"
-  - "autoprefixer.yml"
   - "Gemfile"
   - "Gemfile.lock"
   - "LICENSE.md"
@@ -34,9 +34,6 @@ exclude:
 include:
   - ".well-known"
   - ".htaccess"
-
-gems:
-  - jekyll-assets
 
 assets:
   compress:
@@ -67,7 +64,7 @@ defaults:
       type: decks
     values:
       layout: deck
-      theme: clever
+      theme: white
       transition: fade
   - scope:
       type: slides
