@@ -31,7 +31,7 @@ bundle install --path vendor/bundle
 
 Training programs, decks and slides are ordered by the name of the file that represent them.
 
-## Vizualize
+## Build and vizualize
 
 The command
 
@@ -74,3 +74,13 @@ bundle exec rake postbuild:test:alt         # Test the generated website alt mes
 bundle exec rake postbuild:test:externals   # Test the generated website external links
 bundle exec rake postbuild:test:kiss        # Test if generated website is valid (do not test external links)
 ```
+
+# Explaining the magic
+
+## Cursus, decks and slides
+
+Cursus, decks and slides are managed through Jekyll Collections. In order to establish relations between cursus and decks, and decks and slides, I created the [slideMetaData](./_plugins/slideMetaData.rb) plugin. The relations are based on name convention so make sure that you always name your cursus and decks with the same name.
+
+## Full-markdown slides
+
+[Work-in-progress](https://talk.jekyllrb.com/t/referencing-an-asset-inside-a-collection-item-used-on-multiple-pages/2326)

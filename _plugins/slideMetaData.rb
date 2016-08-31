@@ -2,62 +2,65 @@ require 'nokogiri'
 
 class SlideMetaDataGenerator < Jekyll::Generator
   def generate(site)
-    parser = Jekyll::Converters::Markdown.new(site.config)
 
-    # Going through each "cursus" to collect its decks
-    site.collections['cursus'].docs.each do |cursus|
-      cursus.data['key'] = File.basename(cursus.relative_path, '.md')
-      cursus.data['decks'] = []
-    end
+    if site.collections.key?("cursus") and site.collections.key?("decks") and site.collections.key?("slides")
+      parser = Jekyll::Converters::Markdown.new(site.config)
 
-    # Going through each "decks" to :
-    # - collect its slides
-    # - add itself to its cursus "decks" array
-    site.collections['decks'].docs.each do |deck|
-      arrayFilePath = deck.relative_path.split('/')
-      cursus_key = arrayFilePath[1]
+      # Going through each "cursus" to collect its decks
+      site.collections['cursus'].docs.each do |cursus|
+        cursus.data['key'] = File.basename(cursus.relative_path, '.md')
+        cursus.data['decks'] = []
+      end
 
-      cursus = site.collections['cursus'].docs.find { |cursus| cursus.data['key'] == cursus_key }
-      deck.data['cursus'] = cursus
+      # Going through each "decks" to :
+      # - collect its slides
+      # - add itself to its cursus "decks" array
+      site.collections['decks'].docs.each do |deck|
+        arrayFilePath = deck.relative_path.split('/')
+        cursus_key = arrayFilePath[1]
 
-      cursus.data['decks'].push(deck)
+        cursus = site.collections['cursus'].docs.find { |cursus| cursus.data['key'] == cursus_key }
+        deck.data['cursus'] = cursus
 
-      deck.data['key'] = to_deck_absolute_key(cursus_key, File.basename(deck.relative_path, '.md'))
-      deck.data['slides'] = []
-    end
+        cursus.data['decks'].push(deck)
 
-    # Going through each "slide" to :
-    # - define the depth of the slide (used for RevealJs vertical slides)
-    # - collect its deck and cursus
-    # - add itself to its deck "slides" array
-    # - guess its title depending of its content
-    site.collections['slides'].docs.each do |slide|
-      basename = File.basename(slide.relative_path, '.md')
+        deck.data['key'] = to_deck_absolute_key(cursus_key, File.basename(deck.relative_path, '.md'))
+        deck.data['slides'] = []
+      end
 
-      # Get depth from slide path
-      arrayFilePath = slide.relative_path.split('/')
-      slide.data['depth'] = arrayFilePath.size - 3
+      # Going through each "slide" to :
+      # - define the depth of the slide (used for RevealJs vertical slides)
+      # - collect its deck and cursus
+      # - add itself to its deck "slides" array
+      # - guess its title depending of its content
+      site.collections['slides'].docs.each do |slide|
+        basename = File.basename(slide.relative_path, '.md')
 
-      cursus_key = arrayFilePath[1]
-      slide.data['cursus'] = site.collections['cursus'].docs.find { |cursus| cursus.data['key'] == cursus_key }
+        # Get depth from slide path
+        arrayFilePath = slide.relative_path.split('/')
+        slide.data['depth'] = arrayFilePath.size - 3
 
-      deck_key = to_deck_absolute_key(arrayFilePath[1], arrayFilePath[2])
-      deck = site.collections['decks'].docs.find { |deck| deck.data['key'] == deck_key }
-      slide.data['deck'] = deck
-      deck.data['slides'].push(slide)
+        cursus_key = arrayFilePath[1]
+        slide.data['cursus'] = site.collections['cursus'].docs.find { |cursus| cursus.data['key'] == cursus_key }
 
-      # Get title from slide if not define in Front Matter
-      if slide.data['has_deck_title'] == true
-        slide.data['title'] = deck.data['title']
-      elsif slide.data['title'] == basename
-        doc = Nokogiri::HTML(parser.convert(slide.content))
-        xmlElement = doc.css('h1').first
-        xmlElement = doc.css('h2').first unless xmlElement
-        xmlElement = doc.css('h3').first unless xmlElement
-        xmlElement = doc.css('h4').first unless xmlElement
-        xmlElement = doc.css('h5').first unless xmlElement
-        xmlElement = doc.css('h6').first unless xmlElement
-        slide.data['title'] = xmlElement.content
+        deck_key = to_deck_absolute_key(arrayFilePath[1], arrayFilePath[2])
+        deck = site.collections['decks'].docs.find { |deck| deck.data['key'] == deck_key }
+        slide.data['deck'] = deck
+        deck.data['slides'].push(slide)
+
+        # Get title from slide if not define in Front Matter
+        if slide.data['has_deck_title'] == true
+          slide.data['title'] = deck.data['title']
+        elsif slide.data['title'] == basename
+          doc = Nokogiri::HTML(parser.convert(slide.content))
+          xmlElement = doc.css('h1').first
+          xmlElement = doc.css('h2').first unless xmlElement
+          xmlElement = doc.css('h3').first unless xmlElement
+          xmlElement = doc.css('h4').first unless xmlElement
+          xmlElement = doc.css('h5').first unless xmlElement
+          xmlElement = doc.css('h6').first unless xmlElement
+          slide.data['title'] = xmlElement.content
+        end
       end
     end
   end

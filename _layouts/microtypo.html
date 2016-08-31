@@ -1,0 +1,6 @@
+{% assign the-lang = page.lang | default: site.lang | default: "en" %}
+{% if the-lang == 'fr' %}
+  {{ content | microtypo: 'fr_FR' }}
+{% else %}
+  {{ content | microtypo: 'en_US' }}
+{% endif %}

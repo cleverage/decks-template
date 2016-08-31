@@ -18,7 +18,7 @@ namespace :build do
     end
 
     puts 'Building…'
-    jekyll('serve')
+    jekyll('serve --trace')
   end
   task :serve => :preview
 
@@ -49,7 +49,7 @@ namespace :build do
 
   # launch jekyll
   def jekyll(directives = '')
-    sh 'jekyll ' + directives + ' --config _config.yml,_config_decks.yml'
+    sh 'jekyll ' + directives
   end
 
   # check if there is another rake task running (in addition to this one!)
