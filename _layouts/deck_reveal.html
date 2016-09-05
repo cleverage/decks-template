@@ -3,14 +3,18 @@ layout: microtypo
 asset-folder: "/assets/revealjs"
 ---
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+<html lang="{{ page.lang | default: site.lang | default: "fr" }}">
 
 <head>
 	{% include head_deck.html %}
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="{{ "/css/reveal.css" | prepend: layout.asset-folder | prepend: site.baseurl }}"/>
 	{% if page.theme %}
-		<link rel="stylesheet" href="{{ "/css/theme/" | prepend: layout.asset-folder | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme" />
+		{% if page.theme == 'clever' %}
+			<link rel="stylesheet" href="{{ "/css/clever.css" | prepend: site.baseurl }}" id="theme" />
+		{% else %}
+			<link rel="stylesheet" href="{{ "/css/theme/" | prepend: layout.asset-folder | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme" />
+		{% endif %}
 	{% else %}
 		<link rel="stylesheet" href="{{ "/css/theme/black.css" | prepend: layout.asset-folder | prepend: site.baseurl }}" id="theme" />
 	{% endif %}
