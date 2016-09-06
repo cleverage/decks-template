@@ -25,9 +25,9 @@ bundle install --path vendor/bundle
 
 ## Preparation
 
-- Use the `_cursus` folder to manage your training programs
-- Use the `_decks` folder to manage your decks
-- Use the `_slides` folder to manage your slides
+- Use the `_cursus` folder to manage your training programs (rename `_cursus_sample` into `_cursus` to see an example)
+- Use the `_decks` folder to manage your decks (rename `_decks_sample` into `_decks` to see an example)
+- Use the `_slides` folder to manage your slides (rename `_slides_sample` into `_slides` to see an example)
 
 Training programs, decks and slides are ordered by the name of the file that represent them.
 

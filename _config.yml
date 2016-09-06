@@ -63,7 +63,7 @@ defaults:
   - scope:
       type: decks
     values:
-      layout: deck
+      layout: deck_reveal
       theme: white
       transition: fade
   - scope:

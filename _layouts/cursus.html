@@ -6,8 +6,8 @@ layout: default
 
 <ul>
 {% for deck in page.decks %}
-  <li>
-    <a href="{{ deck.url | prepend: site.baseurl }}" title="{{ deck.title }}">{{ deck.title }}</a> <a href="{{ deck.url | prepend: site.baseurl | append: "?print-pdf" }}" title="{{ deck.title }} au format print">&#9112;</a>
-  </li>
+	<li>
+		<a href="{{ deck.url | prepend: site.baseurl }}" title="{{ deck.title }}">{{ deck.title }}</a> <a href="{{ deck.url | prepend: site.baseurl | append: "?print-pdf" }}" title="{{ deck.title }} au format print">&#9112;</a>
+	</li>
 {% endfor %}
 </ul>

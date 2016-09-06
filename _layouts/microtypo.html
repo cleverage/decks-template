@@ -1,4 +1,4 @@
-{% assign the-lang = page.lang | default: site.lang | default: "en" %}
+{% assign the-lang = page.lang | default: site.lang | default: "fr" %}
 {% if the-lang == 'fr' %}
   {{ content | microtypo: 'fr_FR' }}
 {% else %}

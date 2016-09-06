@@ -4,7 +4,6 @@ gem 'jekyll'
 gem 'nokogiri'
 gem 'rake'
 
-gem 'jekyll-assets', group: :jekyll_plugins
 gem 'jekyll-microtypo', group: :jekyll_plugins
 gem 'jekyll-livereload', group: :jekyll_plugins
 

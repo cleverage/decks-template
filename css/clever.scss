@@ -96,18 +96,23 @@ img.logo {
 			}
 		}
 	}
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: $headingFont;
-	}
-	h2 {
-		font-size: 1.8em;
-	}
-	// Specific headers
+	h1, h2, h3, h4, h5, h6 {
+	font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h2 {
+	font-size: 1.8em;
+  }
+
+  // Specific headers
+  h3.stack-title {
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgb(200, 161, 81);
+  }
+  h2.stack-title {
+	text-transform: uppercase;
+  }
+	
 	.first {
 		h1 {
 			color: $editorMainColor;
