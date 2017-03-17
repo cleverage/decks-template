@@ -6,6 +6,8 @@ Ce projet permet de produire, à partir de sources en Markdown, un site statique
 
 * [Git](http://git-scm.com/)
 * [NodeJS](http://nodejs.org/) (l'utilisation de [nvm](https://github.com/creationix/nvm) est fortement conseillée)
+* [Ruby](http://www.ruby-lang.org) (l'utilisation de [rvm](https://rvm.io/rvm/install) est également conseillée)
+* [Compass](http://compass-style.org/install/)
 
 ## Installation et utilisation
 
