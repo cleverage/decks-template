@@ -66,11 +66,13 @@ img.print-logo {
     border-collapse: collapse;
     border: 1px;
     font-size: 0.7em;
+
     thead {
-      background-color: hexToRgba($editorMainColor, 0.2);
+      background-color: rgba($editorMainColor, 0.2);
     }
+
     th, td {
-      border: 1px solid hexToRgba($editorMainColor, 0.3);
+      border: 1px solid rgba($editorMainColor, 0.3);
       padding: 5px;
     }
   }
@@ -78,7 +80,7 @@ img.print-logo {
   // Code formating
   p, li {
     code {
-      background-color: hexToRgba($editorMainColor, 0.3);
+      background-color: rgba($editorMainColor, 0.3);
     }
   }
 
@@ -87,7 +89,7 @@ img.print-logo {
     padding-left: 2vw;
     border-color: $editorMainColor;
     border-left: 10px solid $editorMainColor;
-    box-shadow: 0 0 2px hexToRgba($editorMainColor, 0.5);
+    box-shadow: 0 0 2px rgba($editorMainColor, 0.5);
     width: 90%;
 
     cite {
