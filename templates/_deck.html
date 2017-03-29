@@ -157,7 +157,7 @@
 			}
 		]
 	});
-	if (ga) {
+	if (!!window['ga']) {
 		Reveal.addEventListener( 'slidechanged', function( event ) {
 	    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
 	    ga('send', 'event', 'Slide', 'click', event.currentSlide);
