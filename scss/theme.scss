@@ -19,12 +19,12 @@
   &.center {
     margin-left: auto;
     margin-right: auto;
-    display:block;
+    display: block;
   }
 }
 
 a.logo {
-  position:absolute;
+  position: absolute;
   z-index: 1000;
 }
 
@@ -52,7 +52,6 @@ img.print-logo {
 }
 
 .reveal {
-
   .progress span {
     background: $progressBarColor;
   }
@@ -65,14 +64,14 @@ img.print-logo {
   table {
     border-collapse: collapse;
     border: 1px;
-    font-size: 0.7em;
+    font-size: .7em;
 
     thead {
-      background-color: rgba($editorMainColor, 0.2);
+      background-color: rgba($editorMainColor, .2);
     }
 
     th, td {
-      border: 1px solid rgba($editorMainColor, 0.3);
+      border: 1px solid rgba($editorMainColor, .3);
       padding: 5px;
     }
   }
@@ -80,7 +79,7 @@ img.print-logo {
   // Code formating
   p, li {
     code {
-      background-color: rgba($editorMainColor, 0.3);
+      background-color: rgba($editorMainColor, .3);
     }
   }
 
@@ -89,7 +88,7 @@ img.print-logo {
     padding-left: 2vw;
     border-color: $editorMainColor;
     border-left: 10px solid $editorMainColor;
-    box-shadow: 0 0 2px rgba($editorMainColor, 0.5);
+    box-shadow: 0 0 2px rgba($editorMainColor, .5);
     width: 90%;
 
     cite {
@@ -115,7 +114,7 @@ img.print-logo {
   // Specific headers
   h3.stack-title {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(200, 161, 81);
+    color: $cleverGold;
   }
   h2.stack-title {
     text-transform: uppercase;
@@ -150,17 +149,17 @@ img.print-logo {
   > ol {
     max-width: 50%;
     float: left;
-    font-size: 0.9em;
+    font-size: .9em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
 
     &:last-child {
-      padding-left: 0.25em;
+      padding-left: .25em;
     }
     &:first-child {
-      padding-right: 0.25em;
+      padding-right: .25em;
     }
 
     margin-left: 0;
@@ -177,6 +176,7 @@ img.print-logo {
     &:only-of-type {
       display: table;
       width: 100%;
+
       > li {
         display: table-cell;
         margin-left: 10px;
@@ -192,5 +192,5 @@ img.print-logo {
 }
 
 .table-compact table {
-  font-size: 0.6em;
+  font-size: .6em;
 }
