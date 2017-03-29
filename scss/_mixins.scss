@@ -1,0 +1,8 @@
+@function hexToRgba($color, $opacity : 1){
+  @return rgba( red($color), green($color), blue($color), $opacity );
+}
+
+/// Background generator
+@mixin bodyBackground() {
+  @include radial-gradient(rgba(28, 30, 32, 1), rgba(85, 90, 95, 1));
+}

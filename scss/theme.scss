@@ -1,47 +1,13 @@
-/**
- * Default theme for reveal.js.
- *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
- */
-// This file has been copied over from
-// ../../bower_components/reveal.js/css/theme/source/default.scss
-// Default mixins and settings -----------------
-@import "./default/mixins";
-@import "./mixins";
-@import "./default/settings";
+@import "settings";
+@import "default/settings";
+@import "default/mixins";
+@import "mixins";
+
+// Import base theme
+@import "default/theme";
 
 // ---------------------------------------------
-
-$cleverGold: #c8a151;
-$clevergarden: #667d18;
-$cleverforge: #007eb1;
-$cleverpresence: #c74917;
-$editorMainColor: $cleverGold;
-
-// Override theme settings ---------------------
-$headingMargin: 40px 0 40px 0 !important;
-$mainFont: Georgia, "Times New Roman", Times, serif;
-$mainColor: #000;
-$headingFont: Arial, Helvetica, sans-serif;
-$headingColor: #000;
-$headingTextShadow: none;
-$headingTextTransform: none;
-$backgroundColor: #fff;
-$linkColor: $cleverGold;
-$linkColorHover: lighten($linkColor, 20%);
-$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
-$progressBarColor: $cleverforge;
-// ---------------------------------------------
-
-// Theme template ------------------------------
-@import "./default/theme";
-// ---------------------------------------------
-
-// Background generator ------------------------
-@mixin bodyBackground() {
-  @include radial-gradient(rgba(28, 30, 32, 1), rgba(85, 90, 95, 1));
-}
-
+// Theme template
 // ---------------------------------------------
 
 .reveal section img {

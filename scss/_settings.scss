@@ -1,0 +1,19 @@
+$cleverGold: #c8a151 !default;
+$clevergarden: #667d18 !default;
+$cleverforge: #007eb1 !default;
+$cleverpresence: #c74917 !default;
+$editorMainColor: $cleverGold !default;
+
+// Override theme settings ---------------------
+$headingMargin: 40px 0 40px 0 !important !default;
+$mainFont: Georgia, "Times New Roman", Times, serif !default;
+$mainColor: #000 !default;
+$headingFont: Arial, Helvetica, sans-serif !default;
+$headingColor: #000 !default;
+$headingTextShadow: none !default;
+$headingTextTransform: none !default;
+$backgroundColor: #fff !default;
+$linkColor: $cleverGold !default;
+$linkColorHover: lighten($linkColor, 20%) !default;
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99) !default;
+$progressBarColor: $cleverforge !default;
