@@ -41,103 +41,103 @@ img.print-logo {
 
 .print-pdf {
   img.logo {
-	display: none;
+    display: none;
   }
 
   img.print-logo {
-	display: block;
-	float: right;
-	width: 20%;
+    display: block;
+    float: right;
+    width: 20%;
   }
 }
 
 .reveal {
 
   .progress span {
-	background: $progressBarColor;
+    background: $progressBarColor;
   }
 
   strong {
-	color: $cleverGold;
+    color: $cleverGold;
   }
 
   // Tables formating
   table {
-	border-collapse: collapse;
-	border: 1px;
-  font-size: 0.7em;
-	thead {
-	  background-color: hexToRgba($editorMainColor, 0.2);
-	}
-	th, td {
-	  border: 1px solid hexToRgba($editorMainColor, 0.3);
-	  padding: 5px;
-	}
+    border-collapse: collapse;
+    border: 1px;
+    font-size: 0.7em;
+    thead {
+      background-color: hexToRgba($editorMainColor, 0.2);
+    }
+    th, td {
+      border: 1px solid hexToRgba($editorMainColor, 0.3);
+      padding: 5px;
+    }
   }
 
   // Code formating
   p, li {
-	code {
-	  background-color: hexToRgba($editorMainColor, 0.3);
-	}
+    code {
+      background-color: hexToRgba($editorMainColor, 0.3);
+    }
   }
 
   // Quote formating
   blockquote {
-	padding-left: 2vw;
-	border-color: $editorMainColor;
-	border-left: 10px solid $editorMainColor;
-	box-shadow: 0 0 2px hexToRgba($editorMainColor, 0.5);
-	width: 90%;
+    padding-left: 2vw;
+    border-color: $editorMainColor;
+    border-left: 10px solid $editorMainColor;
+    box-shadow: 0 0 2px hexToRgba($editorMainColor, 0.5);
+    width: 90%;
 
-	cite {
-	  font-style: italic;
-	  font-size: 70%;
-	  display: block;
-	  margin-top: 1em;
+    cite {
+      font-style: italic;
+      font-size: 70%;
+      display: block;
+      margin-top: 1em;
 
-	  &:before {
-		content: "\2013 "
-	  }
-	}
+      &:before {
+        content: "\2013 "
+      }
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   h2 {
-	font-size: 1.8em;
+    font-size: 1.8em;
   }
 
   // Specific headers
   h3.stack-title {
-	font-family: Arial, Helvetica, sans-serif;
-	color: rgb(200, 161, 81);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(200, 161, 81);
   }
   h2.stack-title {
-	text-transform: uppercase;
+    text-transform: uppercase;
   }
 
   // Listing
   .slides {
-	text-align: left;
-	section {
-	  > ul,
-	  > ol {
-		padding-left: 2vw;
-		li {
-		  ul,
-		  ol {
-			li {
-			  font-size: 80%;
-			  color: #222;
-			}
-		  }
-		}
-		margin-bottom: 20px;
-	  }
-	}
+    text-align: left;
+    section {
+      > ul,
+      > ol {
+        padding-left: 2vw;
+        li {
+          ul,
+          ol {
+            li {
+              font-size: 80%;
+              color: #222;
+            }
+          }
+        }
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
@@ -146,46 +146,46 @@ img.print-logo {
   > p,
   > ul,
   > ol {
-	max-width: 50%;
-	float: left;
-	font-size: 0.9em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	width: 50%;
+    max-width: 50%;
+    float: left;
+    font-size: 0.9em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
 
-	&:last-child {
-	  padding-left: 0.25em;
-	}
-	&:first-child {
-	  padding-right: 0.25em;
-	}
+    &:last-child {
+      padding-left: 0.25em;
+    }
+    &:first-child {
+      padding-right: 0.25em;
+    }
 
-	margin-left: 0;
+    margin-left: 0;
   }
 
   > p {
-	text-align: center;
+    text-align: center;
   }
 }
 
 .two-columns-lists {
   > ul,
   > ol {
-	&:only-of-type {
-	  display: table;
-	  width: 100%;
-	  > li {
-		display: table-cell;
-		margin-left: 10px;
+    &:only-of-type {
+      display: table;
+      width: 100%;
+      > li {
+        display: table-cell;
+        margin-left: 10px;
 
-		li {
-		  display: list-item;
-		}
-	  }
-	}
+        li {
+          display: list-item;
+        }
+      }
+    }
 
-	margin-left: 0;
+    margin-left: 0;
   }
 }
 
