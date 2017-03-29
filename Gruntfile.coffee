@@ -73,6 +73,8 @@ module.exports = (grunt) ->
                 ]
 
         sass:
+            options:
+                bundleExec: true
             theme:
                 files:
                     'dist/css/theme.css': 'scss/theme.scss'

@@ -3,6 +3,9 @@ bower_components
 dist
 *.log
 .sass-cache
+.bundler/*
+!.bundler/config
+.vendors
 index.html
 
 # Windows image file caches

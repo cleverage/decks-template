@@ -8,6 +8,11 @@
       "name": "Boris Schapira",
       "email": "borisschapira@gmail.com",
       "url": "https://github.com/borisschapira/decks-template"
+    },
+    {
+      "name": "Mehdi Kabab",
+      "email": "pioupioum@gmail.com",
+      "url": "http://pioupioum.fr"
     }
   ],
   "keywords": [
@@ -33,7 +38,7 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-imagemin": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-sass": "0.7.3",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-newer": "^1.1.0",
     "grunt-sync": "^0.2.3",

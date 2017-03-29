@@ -6,16 +6,17 @@ Ce projet permet de produire, à partir de sources en Markdown, un site statique
 
 * [Git](http://git-scm.com/)
 * [NodeJS](http://nodejs.org/) (l'utilisation de [nvm](https://github.com/creationix/nvm) est fortement conseillée)
-* [Ruby](http://www.ruby-lang.org) (l'utilisation de [rvm](https://rvm.io/rvm/install) est également conseillée)
-* [Compass](http://compass-style.org/install/)
+* [Ruby](http://www.ruby-lang.org)
+* [Bundler](http://bundler.io/)
 
 ## Installation et utilisation
 
 Pour installer l'ensemble des dépendances du projet :
 
 ```bash
-npm install;
-bower install;
+$ npm install
+$ bower install
+$ bundle install
 ```
 
 ## Écriture
